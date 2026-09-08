@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Panetiere | Restaurant-Café Gourmet & Repostería Fina</title>
+  <meta name="description" content="Fundada en 1993. Repostería fina, desayunos, almuerzos y el tradicional Cardenal de Fresas. Comparte tus momentos.">
+  
+  <!-- Tipografía Google Fonts: Playfair Display (Serif gourmet) + Inter (Sans-serif limpia) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="sstyles.css">
+</head>
+<body>
+
+  <!-- ========================================== -->
+  <!-- HEADER & NAVEGACIÓN PRINCIPAL              -->
+  <!-- ========================================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="La Panetiere - Inicio">
+        <span class="logo-title">La Panetiere</span>
+        <span class="logo-subtitle">Café & Repostería • 1993</span>
+      </a>
+
+      <!-- Menú de navegación -->
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Inicio</a></li>
+          
+          <!-- Menú desplegable organizado por categorías no redundantes -->
+          <li class="dropdown">
+            <a href="#menu" class="nav-link dropdown-toggle" aria-haspopup="true">Menú <span class="arrow">▾</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="desayunos.html">Desayunos</a></li>
+              <li><a href="almuerzos-cenas.html">Almuerzos y Cenas</a></li>
+              <li><a href="postres.html">Postres y Panadería</a></li>
+              <li><a href="bebidas.html">Bebidas & Café</a></li>
+              <li><a href="ejecutivo.html">Menú Ejecutivo</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#historia" class="nav-link">Nuestra Historia</a></li>
+          <li><a href="contacto.html" class="nav-link">Contáctenos</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contacto.html#reservas" class="btn btn-primary">Reservar Mesa</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- HERO SECTION                               -->
+  <!-- ========================================== -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <span class="badge-tag">Tradición Gourmet desde 1993</span>
+      <h1 class="hero-title">Comparte tus momentos con el auténtico sabor artesanal</h1>
+      <p class="hero-description">
+        Una fusión perfecta entre la tradición pastelera francesa, la calidez italiana y la sazón de nuestra tierra.
+      </p>
+      <div class="hero-buttons">
+        <a href="#menu-destacado" class="btn btn-gold">Explorar Menú</a>
+        <a href="contacto.html" class="btn btn-outline">Visítanos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- NUESTRA HISTORIA / PROPUESTA DE VALOR      -->
+  <!-- ========================================== -->
+  <section id="historia" class="section history-section">
+    <div class="container grid-2-col align-center">
+      <div class="history-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Horneado artesanal de pan en La Panetiere" class="featured-img" loading="lazy">
+        <div class="experience-badge">
+          <span class="years">+30</span>
+          <span class="text">Años de excelencia</span>
+        </div>
+      </div>
+      <div class="history-text">
+        <span class="subheading">Nuestra Herencia</span>
+        <h2>Tradición, pasión y repostería fina</h2>
+        <p>
+          Desde 1993, en <strong>La Panetiere</strong> hemos perfeccionado el arte de reunir a las familias y amigos en torno a la buena mesa. Nacimos inspirados en las panaderías artesanales francesas, incorporando la generosidad de la cocina italiana y el toque entrañable de El Salvador.
+        </p>
+        <p>
+          Cada postre, pan saliendo del horno y platillo es preparado diariamente con ingredientes seleccionados de la más alta calidad.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- MENÚ DESTACADO / NAVEGACIÓN DE CATEGORÍAS  -->
+  <!-- ========================================== -->
+  <section id="menu-destacado" class="section menu-section bg-light">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="subheading">Selección Especial</span>
+        <h2>Platillos e Insignias del Menú</h2>
+        <p class="section-lead">Estructurado para ofrecerte una experiencia rápida y consistente.</p>
+      </div>
+
+      <!-- Accesos directos a las categorías limpias y unificadas -->
+      <div class="category-pills">
+        <a href="desayunos.html" class="pill-btn">Desayunos</a>
+        <a href="almuerzos-cenas.html" class="pill-btn">Almuerzos & Cenas</a>
+        <a href="postres.html" class="pill-btn active"> Postres & Panadería</a>
+        <a href="bebidas.html" class="pill-btn"> Bebidas</a>
+        <a href="ejecutivo.html" class="pill-btn"> Menú Ejecutivo</a>
+      </div>
+
+      <!-- Tarjetas de producto estandarizadas (Criterio visual uniforme 1:1 u 4:3) -->
+      <div class="products-grid">
+        
+        <!-- Producto Insignia -->
+        <article class="product-card featured-card">
+          <div class="card-badge">Producto Estrella</div>
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=600&q=80" alt="Cardenal de Fresas insignia de La Panetiere" loading="lazy">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Cardenal de Fresas</h3>
+            <p class="product-desc">Crujiente merengue horneado relleno de suave crema chantilly y fresas frescas seleccionadas.</p>
+            <div class="product-footer">
+              <span class="product-price">$4.50</span>
+              <a href="postres.html" class="btn-link">Ver detalles →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tarjeta Estándar 2 -->
+        <article class="product-card">
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=600&q=80" alt="Desayuno Francés Tradicional" loading="lazy">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Desayuno Panetiere</h3>
+            <p class="product-desc">Huevos al gusto acompañados de croissant recién horneado, queso artesanal y frijoles refritos.</p>
+            <div class="product-footer">
+              <span class="product-price">$7.25</span>
+              <a href="desayunos.html" class="btn-link">Ver detalles →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tarjeta Estándar 3 -->
+        <article class="product-card">
+          <div class="product-image-container">
+            <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=600&q=80" alt="Pasta Lasagna della Casa" loading="lazy">
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Lasagna della Casa</h3>
+            <p class="product-desc">Láminas de pasta fresca intercaladas con boloñesa de la casa, bechamel y queso parmesano gratinado.</p>
+            <div class="product-footer">
+              <span class="product-price">$9.80</span>
+              <a href="almuerzos-cenas.html" class="btn-link">Ver detalles →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tarjeta Estándar 4 (Ejemplo de Placeholder Uniforme cuando falta foto real) -->
+        <article class="product-card">
+          <div class="product-image-container photo-placeholder">
+            <div class="placeholder-content">
+              <svg width="40" height="40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+              <span>Café & Bebidas</span>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Cappuccino Especial</h3>
+            <p class="product-desc">Espreso doble elaborado con grano de altura salvadoreño y leche texturizada al vapor.</p>
+            <div class="product-footer">
+              <span class="product-price">$3.25</span>
+              <a href="bebidas.html" class="btn-link">Ver detalles →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- TESTIMONIOS Y EXPERIENCIA                 -->
+  <!-- ========================================== -->
+  <section class="section testimonials-section">
+    <div class="container text-center">
+      <span class="subheading">Lo que dicen nuestros clientes</span>
+      <h2>Momentos inolvidables</h2>
+      
+      <div class="testimonial-card">
+        <blockquote class="testimonial-quote">
+          "El Cardenal de Fresas es sencillamente imbatible. La Panetiere mantiene esa atmósfera acogedora donde puedes pasar horas disfrutando un buen café y una conversación tranquila."
+        </blockquote>
+        <div class="testimonial-author">
+          <strong>— Sofía M.</strong>
+          <span>Cliente desde 2012</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECCIÓN DE CONTACTO Y UBICACIÓN MEJORADA   -->
+  <!-- ========================================== -->
+  <section id="contacto" class="section contact-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="subheading">Visítanos</span>
+        <h2>Estamos para atenderte</h2>
+        <p>Encuentra tu sucursal más cercana o envíanos un mensaje.</p>
+      </div>
+
+      <div class="grid-2-col contact-grid">
+        <!-- Información de contacto organizada -->
+        <div class="contact-info">
+          <div class="info-item">
+            <h3>Ubicación Principal</h3>
+            <p>Zona Rosa, Calle La Mascota #123, San Salvador, El Salvador.</p>
+          </div>
+
+          <div class="info-item">
+            <h3>Horarios de Atención</h3>
+            <p>Lunes a Sábado: 7:00 AM – 8:00 PM<br>Domingos: 8:00 AM – 7:00 PM</p>
+          </div>
+
+          <div class="info-item">
+            <h3> Teléfono & Pedidos</h3>
+            <p>+(503) 2200-0000 | +(503) 7000-0000 (WhatsApp)</p>
+          </div>
+
+          <!-- Mapa embebido moderno -->
+          <div class="map-container">
+            <iframe 
+              title="Ubicación de La Panetiere"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15505.356263592182!2d-89.2435!3d13.6929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQxJzM0LjQiTiA4OcKwMTQnMzYuNiJX!5e0!3m2!1ses!2ssv!4v1620000000000!5m2!1ses!2ssv" 
+              width="100%" height="200" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+
+        <!-- Formulario de contacto estilizado -->
+        <div class="contact-form-wrapper">
+          <form class="contact-form" action="#" method="POST">
+            <h3>Envíanos un mensaje</h3>
+            <div class="form-group">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Gómez" required>
+            </div>
+            <div class="form-group">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+            </div>
+            <div class="form-group">
+              <label for="asunto">Asunto</label>
+              <select id="asunto" name="asunto">
+                <option value="reserva">Reservación de Mesa</option>
+                <option value="eventos">Eventos y Pedidos Especiales</option>
+                <option value="comentarios">Comentarios y Sugerencias</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- FOOTER                                     -->
+  <!-- ========================================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <span class="logo-title">La Panetiere</span>
+        <p>Comparte tus momentos con la mejor selección gourmet y repostería artesanal de El Salvador.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="desayunos.html">Desayunos</a></li>
+          <li><a href="postres.html">Postres y Repostería</a></li>
+          <li><a href="contacto.html">Contáctenos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Síguenos</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom text-center">
+      <p>&copy; 2026 La Panetiere S.A. de C.V. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

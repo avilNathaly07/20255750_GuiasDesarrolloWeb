@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Panetiere | Café & Bistro Gourmet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #6B1D2F;       /* Borgoña / Vino */
+      --primary-dark: #4A121F;
+      --accent: #C5A059;        /* Dorado champagne */
+      --bg-cream: #FAF7F2;      /* Crema cálido */
+      --text-main: #2C2C2C;
+      --text-muted: #666666;
+      --white: #FFFFFF;
+      --font-heading: 'Cormorant Garamond', serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--bg-cream);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    /* Header & Navegación */
+    .header {
+      background-color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+    }
+
+    .brand-logo {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--primary);
+    }
+
+    .btn-contact {
+      background-color: var(--primary);
+      color: var(--white);
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-contact:hover {
+      background-color: var(--primary-dark);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                  url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=80') center/cover;
+      height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      padding: 0 1rem;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: 3.8rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    /* Historia Section */
+    .about {
+      max-width: 1100px;
+      margin: 5rem auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text p {
+      color: var(--text-muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .about-card {
+      background-color: var(--white);
+      padding: 2.5rem;
+      border-radius: 12px;
+      border-left: 4px solid var(--accent);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+
+    .about-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Menu Categories */
+    .menu-section {
+      background-color: var(--white);
+      padding: 5rem 2rem;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 3.5rem auto;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 2.8rem;
+      color: var(--primary);
+    }
+
+    .menu-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .menu-card {
+      background: var(--bg-cream);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    }
+
+    .menu-card-img {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .menu-card-body {
+      padding: 1.5rem;
+    }
+
+    .menu-card-title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: var(--primary-dark);
+      color: var(--white);
+      padding: 3rem 2rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .footer-logo {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      color: var(--accent);
+    }
+
+    .copyright {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      width: 100%;
+      padding-top: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.5rem; }
+      .about { grid-template-columns: 1fr; gap: 2rem; }
+      .nav-menu { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">La Panetiere</a>
+      <ul class="nav-menu">
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#historia" class="nav-link">Nuestra Historia</a></li>
+        <li><a href="#menu" class="nav-link">Menú</a></li>
+      </ul>
+      <a href="#contacto" class="btn-contact">Contáctenos</a>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h1 class="hero-title">Comparte tus mejores momentos</h1>
+      <p class="hero-subtitle">Tradición culinaria con el toque francés, sabor italiano y espíritu salvadoreño desde 1993.</p>
+    </div>
+  </section>
+
+  <section class="about" id="historia">
+    <div class="about-text">
+      <h2>Nuestra Historia</h2>
+      <p>Nacimos el 29 de abril de 1993 ofreciendo originales recetas de pastelería internacional. Con el tiempo, expandimos nuestra oferta a opciones gourmet como sándwiches, pizzas, crepas y bebidas frías y calientes.</p>
+      <p>Nuestra misión es satisfacer tus más sabrosos gustos culinarios en el espacio ideal para compartir.</p>
+    </div>
+    <div class="about-card">
+      <h3>La casa del mejor Cardenal de Fresas</h3>
+      <p>Nuestro icónico Cardenal de Fresas es una mezcla de tradición y personalidad única que nos enorgullece presentar como nuestra especialidad de la casa.</p>
+    </div>
+  </section>
+
+  <section class="menu-section" id="menu">
+    <div class="section-header">
+      <h2 class="section-title">Explora Nuestro Menú</h2>
+      <p style="color: var(--text-muted);">Especialidades preparadas con ingredientes selectos</p>
+    </div>
+    <div class="menu-grid">
+      <a href="#" class="menu-card">
+        <div class="menu-card-img" style="background-image: url('https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=600&q=80');"></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-title">Desayunos</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Opciones tradicionales y gourmet para iniciar la mañana.</p>
+        </div>
+      </a>
+      <a href="#" class="menu-card">
+        <div class="menu-card-img" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80');"></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-title">Almuerzos y Cenas</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Sándwiches, pizzas, crepas y ensaladas frescas.</p>
+        </div>
+      </a>
+      <a href="#" class="menu-card">
+        <div class="menu-card-img" style="background-image: url('https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=600&q=80');"></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-title">Postres y Cakes</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Repostería fina, pasteles tradicionales y nuestro especial Cardenal.</p>
+        </div>
+      </a>
+      <a href="#" class="menu-card">
+        <div class="menu-card-img" style="background-image: url('https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80');"></div>
+        <div class="menu-card-body">
+          <h3 class="menu-card-title">Bebidas</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Café de especialidad, bebidas frías y caliente.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer class="footer" id="contacto">
+    <div class="footer-content">
+      <div class="footer-logo">La Panetiere</div>
+      <p>Café & Restaurant Gourmet • El Salvador</p>
+      <div class="copyright">
+        &copy; 2026 La Panetiere. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
