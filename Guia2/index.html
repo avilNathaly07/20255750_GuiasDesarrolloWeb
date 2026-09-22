@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Panetière — Casa del mejor Cardenal de Fresas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-accent"></span> La Panetière
+    </a>
+
+    <!-- CAMBIO: "Contacto" ahora enlaza a contacto.html (antes iba al footer con #contacto) -->
+    <nav class="main-nav">
+      <a href="#historia">Nuestra Historia</a>
+      <a href="menu-comidas.html">Menú</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <!-- CAMBIO: el CTA del header ahora lleva directo al formulario de contacto -->
+    <a href="contacto.html#formulario" class="btn btn-primary btn-small">Haz tu Pedido</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy animate-fade-in-up">
+      <p class="eyebrow"><span class="badge-dot"></span> Desde 1993 · El Salvador</p>
+      <h1 class="display-title">Casa del Mejor<br>Cardenal de Fresas</h1>
+      <p class="script-line">Una mezcla de tradición con personalidad única</p>
+
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">Explorar Repostería</a>
+      </div>
+    </div>
+
+    <div class="hero-art animate-fade-in-up">
+      <div class="gourmet-badge">
+        <span>Especialidad</span>
+        <strong>Receta Insignia</strong>
+      </div>
+      <svg class="hero-blob" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill="var(--honey-gold)" d="M373,58 C433,96 481,165 486,236 C491,308 454,382 393,428 C332,474 249,494 179,470 C110,447 55,381 38,308 C21,235 41,155 96,105 C151,55 313,20 373,58Z"/>
+      </svg>
+      <svg class="hero-blob hero-blob--sage" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path fill="var(--mint-sage)" d="M300,90 C360,110 420,150 440,210 C460,270 445,340 400,385 C355,430 285,450 220,435 C155,420 95,370 75,305 C55,240 75,160 130,115 C185,70 240,70 300,90Z"/>
+      </svg>
+      <div class="hero-photo-frame">
+        <img
+          class="hero-photo"
+          src="img/Cardenal de fresas.jpg"
+          alt="Cardenal de Fresas, el pastel insignia de La Panetière">
+      </div>
+    </div>
+  </div>
+
+  <svg class="wave-divider wave-animated" viewBox="0 0 1440 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="var(--burnt-orange)" d="M0,64 C240,140 420,10 720,48 C1020,86 1200,150 1440,72 L1440,160 L0,160 Z"/>
+  </svg>
+</section>
+
+<!-- ============ DESTACADOS ============ -->
+<section class="destacados" id="menu">
+  <div class="destacados-inner">
+    <div class="card">
+      <div class="card-header">
+        <p class="card-eyebrow">8:00 — 11:00 a.m.</p>
+        <span class="card-icon"></span>
+      </div>
+      <h3>Desayunos Gourmet</h3>
+      <p>Comienza el día con nuestros desayunos completos, servidos frescos todas las mañanas en un ambiente cálido y familiar.</p>
+    </div>
+
+    <div class="card card--featured">
+      <div class="card-header">
+        <p class="card-eyebrow">Reservas</p>
+        <span class="card-icon"></span>
+      </div>
+      <h3>Reserva tu Pastel Favorito</h3>
+      <p>Aparta con tiempo el Cardenal de Fresas u otras especialidades para tus celebraciones especiales.</p>
+      <!-- CAMBIO: el botón de reservar ahora lleva al formulario de contacto -->
+      <a href="contacto.html#formulario" class="btn btn-primary btn-small card-btn">Reservar Pastel</a>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <p class="card-eyebrow">Todo el día</p>
+        <span class="card-icon"></span>
+      </div>
+      <h3>Restaurant-Café</h3>
+      <p>Sándwiches, pizzas, crepas y bebidas calientes o frías, pensadas para acompañar cualquier momento del día.</p>
+    </div>
+  </div>
+
+  <svg class="wave-divider wave-divider--to-cream wave-animated" viewBox="0 0 1440 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="var(--cream-paper)" d="M0,90 C280,20 460,140 760,96 C1060,52 1220,120 1440,60 L1440,160 L0,160 Z"/>
+  </svg>
+</section>
+
+<!-- ============ HISTORIA ============ -->
+<section class="historia" id="historia">
+  <div class="historia-inner">
+    <div class="historia-art">
+      <svg class="wheat-line" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M100 20 L100 300" stroke="var(--deep-coffee)" stroke-width="1.3" fill="none"/>
+        <path d="M100 60 C120 45 140 45 150 30 M100 60 C80 45 60 45 50 30" stroke="var(--deep-coffee)" stroke-width="1.3" fill="none"/>
+        <path d="M100 100 C120 85 140 85 150 70 M100 100 C80 85 60 85 50 70" stroke="var(--deep-coffee)" stroke-width="1.3" fill="none"/>
+        <path d="M100 140 C120 125 140 125 150 110 M100 140 C80 125 60 125 50 110" stroke="var(--deep-coffee)" stroke-width="1.3" fill="none"/>
+        <path d="M100 180 C120 165 140 165 150 150 M100 180 C80 165 60 165 50 150" stroke="var(--deep-coffee)" stroke-width="1.3" fill="none"/>
+        <path d="M100 220 C120 205 140 205 150 190 M100 220 C80 205 60 205 50 190" stroke="var(--deep-coffee)" stroke-width="1.3" fill="none"/>
+      </svg>
+      <div class="historia-photo-wrapper">
+        <span class="est-seal">Est. 1993</span>
+        <img
+          class="historia-photo"
+          src="img/Panetiere.webp"
+          alt="Horneado artesanal en La Panetière">
+      </div>
+    </div>
+
+    <div class="historia-copy">
+      <p class="eyebrow">Nuestra Historia</p>
+      <h2 class="section-title">29 de Abril de 1993</h2>
+      <p>Nacimos ofreciendo originales recetas de pastelería internacional que incluían desde pasteles tradicionales hasta repostería de gusto refinado. Con el pasar del tiempo, y de la mano de la satisfacción de nuestros clientes, comenzamos a ofrecer más opciones como sándwiches, pizzas, crepas, ensaladas, bebidas frías y calientes, todo bajo el concepto de restaurant-café gourmet.</p>
+      <p>La Panetière esencialmente combina el gusto francés, el sabor italiano pero sobre todo el espíritu salvadoreño con excepcionales y famosas recetas exóticas del mundo culinario. Nuestra especialidad es el cardenal de fresas: una mezcla de tradición con personalidad única. Nos enorgullece ser la casa del mejor Cardenal de Fresas en El Salvador.</p>
+      <p class="script-quote">«Nuestra pasión es y será por siempre ofrecer el lugar ideal para que compartas tus mejores momentos.»</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" id="contacto">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <p class="logo logo--light"><span class="logo-accent"></span> La Panetière</p>
+      <p>Desde 1993, horneando tradición en El Salvador.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <a href="#menu">Menú</a>
+      <a href="#historia">Nuestra Historia</a>
+      <!-- CAMBIO: nuevo enlace directo a la página de contacto -->
+      <a href="contacto.html">Contáctanos</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <a href="tel:22638017">2263-8017</a>
+      <a href="tel:22649937">2264-9937</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <div class="social-row">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer-legal">© 2026 La Panetière. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

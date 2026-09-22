@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cakes — La Panetière</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER (idéntico al de index.html, con el mega-menú de Menú) ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-accent"></span> La Panetière
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html#historia">Nuestra Historia</a>
+      <div class="menu-item has-dropdown" tabindex="0">
+      <a href="menu-comidas.html">Menú</a>
+      <div class="nav-dropdown">
+        <a href="menu-comidas.html">Comidas</a>
+        <a href="menu-bebidas.html">Bebidas</a>
+        <a href="menu-postres.html">Postres</a>
+        <a href="menu-cakes.html">Cakes</a>
+        <a href="menu-panaderia.html">Panadería y Repostería</a>
+      </div>
+    </div>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <a href="contacto.html#formulario" class="btn btn-primary btn-small">Haz tu Pedido</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-inner menu-hero-inner">
+    <div class="hero-copy reveal">
+      <p class="eyebrow"><span class="badge-dot"></span> Clásicos · Especiales · Línea Cero Azúcar · Pies</p>
+      <h1 class="display-title">Cakes</h1>
+      <p class="script-line">Para tus celebraciones más dulces</p>
+    </div>
+  </div>
+
+  <svg class="wave-divider wave-animated" viewBox="0 0 1440 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="var(--burnt-orange)" d="M0,64 C240,140 420,10 720,48 C1020,86 1200,150 1440,72 L1440,160 L0,160 Z"/>
+  </svg>
+</section>
+
+<!-- ============ MENÚ: pestañas + tarjetas (contenido generado por js/menu.js a partir de js/menu-data.js) ============ -->
+<section class="menu-page" data-menu-key="cakes">
+  <div class="menu-tabs" id="menuTabs" role="tablist"></div>
+  <div class="menu-panels" id="menuPanels"></div>
+</section>
+
+<!-- ============ FOOTER (idéntico al de index.html) ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <p class="logo logo--light"><span class="logo-accent"></span> La Panetière</p>
+      <p>Desde 1993, horneando tradición en El Salvador.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <a href="menu-comidas.html">Menú</a>
+      <a href="index.html#historia">Nuestra Historia</a>
+      <a href="contacto.html">Contáctanos</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <a href="tel:22638017">2263-8017</a>
+      <a href="tel:22649937">2264-9937</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <div class="social-row">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer-legal">© 2026 La Panetière. Todos los derechos reservados.</p>
+</footer>
+
+<script src="js/menu-data.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

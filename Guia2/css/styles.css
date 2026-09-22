@@ -1,0 +1,1342 @@
+/* ==========================================================
+   LA PANETIÈRE — Homepage
+   Sistema de diseño editorial "Pa'lais Gourmet"
+   ========================================================== */
+
+:root {
+  /* Color */
+  --cream-paper: #fbf9f6;
+  --pure-white: #ffffff;
+  --deep-coffee: #3D2314;
+  --honey-gold: #dbac10;
+  --burnt-orange: #9c1515;
+  --mint-sage: #a2d3a6;
+
+  /* Tipografía */
+  --font-display: 'Oswald', ui-sans-serif, system-ui, sans-serif;
+  --font-script: 'Caveat', cursive;
+  --font-ui: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  /* Forma */
+  --radius-card: 12px;
+  --radius-button: 32px;
+
+  /* Sombra asimétrica de tarjetas */
+  --shadow-card: rgba(0, 0, 0, 0.08) -8px 12px 30px 0px;
+  --shadow-hover: rgba(61, 35, 20, 0.18) -12px 20px 40px 0px;
+
+  --max-width: 1200px;
+}
+
+/* ---------- Reset básico ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream-paper);
+  color: var(--deep-coffee);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- Detalles Boutique / Piqui ---------- */
+.eyebrow {
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--burnt-orange);
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--honey-gold);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.section-title,
+.display-title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--deep-coffee);
+  line-height: 1.05;
+}
+
+.script-line {
+  font-family: var(--font-script);
+  color: var(--burnt-orange);
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+p.script-quote {
+  font-family: var(--font-script) !important;
+  color: var(--burnt-orange) !important;
+  font-size: 25px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  margin-top: 24px !important;
+  display: block !important;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  border-radius: var(--radius-button);
+  padding: 18px 40px;
+  cursor: pointer;
+  transition: all 1.2s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary {
+  background: var(--deep-coffee);
+  color: var(--pure-white);
+  border: 2px solid var(--deep-coffee);
+  box-shadow: 0 4px 15px rgba(61, 35, 20, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  background: var(--burnt-orange);
+  border-color: var(--burnt-orange);
+  box-shadow: 0 8px 25px rgba(156, 21, 21, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--burnt-orange);
+  border: 2px solid var(--burnt-orange);
+}
+
+.btn-outline:hover {
+  background: var(--burnt-orange);
+  color: var(--pure-white);
+  transform: translateY(-2px);
+}
+
+.btn-small {
+  padding: 12px 28px;
+  font-size: 12px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(251, 249, 246, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(61, 35, 20, 0.08);
+  transition: all 0.3s ease;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--deep-coffee);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-accent {
+  color: var(--honey-gold);
+  font-size: 14px;
+}
+
+.main-nav {
+  display: flex;
+  gap: 40px;
+}
+
+.main-nav a {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--deep-coffee);
+  padding-bottom: 4px;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--burnt-orange);
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--burnt-orange);
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  padding-top: 64px;
+  overflow: hidden;
+}
+
+.hero-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px 120px;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 64px;
+}
+
+.hero-copy .display-title {
+  font-size: 56px;
+  margin-bottom: 24px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hero-art {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sello Flotante Gourmet */
+.gourmet-badge {
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  z-index: 10;
+  background: var(--pure-white);
+  border: 1px solid var(--honey-gold);
+  border-radius: 50px;
+  padding: 10px 18px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: rotate(5deg);
+  animation: floatBadge 4s ease-in-out infinite;
+}
+
+.gourmet-badge span {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--burnt-orange);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.gourmet-badge strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--deep-coffee);
+}
+
+/* Animación de Blobs */
+.hero-blob {
+  position: absolute;
+  width: 105%;
+  height: auto;
+  top: -6%;
+  left: -6%;
+  z-index: 0;
+  opacity: 0.85;
+  animation: floatBlob 8s ease-in-out infinite alternate;
+}
+
+.hero-blob--sage {
+  opacity: 0.55;
+  transform: scale(0.82) translate(10%, 14%);
+  animation: floatBlob 10s ease-in-out infinite alternate-reverse;
+}
+
+.hero-photo-frame {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.hero-photo-frame:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: var(--shadow-hover);
+}
+
+.hero-photo {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.hero-photo-frame:hover .hero-photo {
+  transform: scale(1.04);
+}
+
+.wave-divider {
+  display: block;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.wave-divider--to-cream {
+  height: 90px;
+}
+
+/* ---------- Destacados ---------- */
+.destacados {
+  background: var(--burnt-orange);
+  position: relative;
+  margin-top: -2px;
+  padding-bottom: 20px;
+}
+
+.destacados-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 32px 96px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.card {
+  background: var(--pure-white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  top: 0;
+}
+
+.card:hover {
+  top: -8px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  border-top: 4px solid var(--honey-gold);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-icon {
+  font-size: 20px;
+}
+
+.card-eyebrow {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--burnt-orange);
+}
+
+.card h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--deep-coffee);
+  margin-bottom: 4px;
+}
+
+.card p {
+  color: rgba(61, 35, 20, 0.85);
+  line-height: 1.5;
+}
+
+.card-btn {
+  margin-top: 12px;
+  align-self: flex-start;
+}
+
+/* Tarjeta Destacada */
+.card--featured {
+  border-left: 4px solid var(--honey-gold);
+}
+
+/* ---------- Historia ---------- */
+.historia {
+  background: var(--cream-paper);
+  padding: 60px 0 128px;
+}
+
+.historia-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.historia-art {
+  position: relative;
+}
+
+.historia-photo-wrapper {
+  position: relative;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  transition: all 0.4s ease;
+}
+
+.historia-photo-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.est-seal {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(61, 35, 20, 0.88);
+  color: var(--honey-gold);
+  font-family: var(--font-display);
+  padding: 8px 16px;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  border-radius: 4px;
+  border: 1px solid var(--honey-gold);
+  z-index: 5;
+  backdrop-filter: blur(4px);
+}
+
+.historia-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.historia-photo-wrapper:hover .historia-photo {
+  transform: scale(1.03);
+}
+
+.wheat-line {
+  position: absolute;
+  width: 140px;
+  height: auto;
+  top: -36px;
+  right: -48px;
+  transform: rotate(8deg);
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.historia-copy .section-title {
+  font-size: 40px;
+  margin: 8px 0 28px;
+}
+
+.historia-copy p {
+  max-width: 52ch;
+  color: rgba(61, 35, 20, 0.9);
+  margin-bottom: 18px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--deep-coffee);
+  color: var(--cream-paper);
+  padding: 80px 0 32px;
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 48px;
+}
+
+.logo--light {
+  color: var(--cream-paper);
+  margin-bottom: 12px;
+}
+
+.footer-brand p:last-child {
+  color: rgba(251, 249, 246, 0.7);
+  max-width: 30ch;
+}
+
+.footer-col h4 {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--honey-gold);
+  margin-bottom: 16px;
+}
+
+.footer-col a {
+  display: block;
+  color: rgba(251, 249, 246, 0.85);
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+}
+
+.footer-col a:hover {
+  color: var(--honey-gold);
+  transform: translateX(4px);
+}
+
+.social-row {
+  display: flex;
+  gap: 16px;
+}
+
+.social-row a:hover {
+  transform: translateY(-2px);
+}
+
+.footer-legal {
+  text-align: center;
+  margin-top: 64px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: rgba(251, 249, 246, 0.55);
+}
+
+/* ---------- Keyframes / Animaciones ---------- */
+
+@keyframes floatBlob {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+}
+
+@keyframes floatBadge {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(5deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(3deg);
+  }
+}
+
+/* Entrada de elementos */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 960px) {
+  .main-nav {
+    display: none;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    padding-bottom: 80px;
+  }
+
+  .hero-copy .display-title {
+    font-size: 42px;
+  }
+
+  .hero-art {
+    order: -1;
+  }
+
+  .destacados-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .historia-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 560px) {
+  .header-inner {
+    padding: 16px 20px;
+  }
+
+  .hero-inner {
+    padding: 0 20px 64px;
+  }
+
+  .hero-copy .display-title {
+    font-size: 34px;
+  }
+
+  .hero-copy .script-line {
+    font-size: 26px;
+  }
+
+  p.script-quote {
+    font-size: 30px !important;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    justify-content: center;
+  }
+
+  .destacados-inner,
+  .historia-inner,
+  .footer-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+  }
+}
+/* ==========================================================
+   PÁGINA "CONTÁCTANOS" (contacto.html)
+   Bloque nuevo — reutiliza variables, .btn, .card-eyebrow,
+   .eyebrow, .section-title, .display-title, .script-line,
+   .wave-divider y .hero ya existentes. Nada de lo anterior
+   se modifica ni se duplica.
+   ========================================================== */
+
+/* ---------- Hero de Contáctanos (variante de .hero) ---------- */
+/* .hero-inner ya es un grid de 2 columnas: aquí lo forzamos
+   a una sola columna centrada, sin tocar la regla original. */
+.hero-inner--contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+  padding-bottom: 72px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-inner--contacto .script-line {
+  margin-bottom: 0;
+}
+
+/* Blobs decorativos reutilizados, reposicionados como fondo
+   suave detrás del texto centrado (en vez de al lado de una foto) */
+.hero-blob--contacto {
+  width: 460px;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-55%);
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.hero-blob--contacto-2 {
+  transform: translateX(-45%) scale(0.82) translateY(10%);
+  opacity: 0.28;
+}
+
+/* ---------- Sección Información + Formulario ---------- */
+.contacto-section {
+  background: var(--pure-white);
+  padding: 24px 0 0;
+  position: relative;
+}
+
+.contacto-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px 96px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.contacto-lead {
+  color: rgba(61, 35, 20, 0.85);
+  max-width: 48ch;
+  margin-bottom: 32px;
+}
+
+/* Grid de tarjetas de contacto rápido (dirección, horario, teléfono...) */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--cream-paper);
+  border: 1px solid rgba(61, 35, 20, 0.08);
+  border-radius: var(--radius-card);
+  padding: 18px 20px;
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+              box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Solo los info-card que son enlaces (<a>) reciben el hover interactivo */
+a.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+  border-color: var(--honey-gold);
+}
+
+.info-icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--pure-white);
+  color: var(--burnt-orange);
+  border: 1.5px solid rgba(156, 21, 21, 0.25);
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.info-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+a.info-card:hover .info-icon {
+  background: var(--burnt-orange);
+  color: var(--pure-white);
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-text strong {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--deep-coffee);
+}
+
+.info-text span {
+  font-size: 14px;
+  color: rgba(61, 35, 20, 0.8);
+  line-height: 1.5;
+}
+
+/* ---------- Formulario ---------- */
+.contacto-form-wrapper {
+  background: var(--cream-paper);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 40px 36px;
+  border: 1px solid rgba(61, 35, 20, 0.06);
+}
+
+.form-title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 26px;
+  color: var(--deep-coffee);
+  margin: 6px 0 28px;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-family: var(--font-ui);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--deep-coffee);
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: var(--font-ui);
+  font-size: 15px;
+  color: var(--deep-coffee);
+  background: var(--pure-white);
+  border: 1.5px solid rgba(61, 35, 20, 0.15);
+  border-radius: 8px;
+  padding: 14px 16px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease,
+              transform 0.25s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Animación sutil al interactuar con los campos */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--burnt-orange);
+  box-shadow: 0 0 0 4px rgba(156, 21, 21, 0.1);
+  transform: translateY(-2px);
+}
+
+.form-submit {
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.form-feedback {
+  min-height: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--burnt-orange);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.form-feedback.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Sección de Ubicación / Mapa ---------- */
+.ubicacion-section {
+  background: var(--cream-paper);
+  padding: 8px 0 128px;
+}
+
+.ubicacion-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 32px;
+  text-align: center;
+}
+
+.ubicacion-lead {
+  color: rgba(61, 35, 20, 0.85);
+  max-width: 56ch;
+  margin: 0 auto 32px;
+}
+
+.map-frame {
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(61, 35, 20, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.map-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.map-frame iframe {
+  display: block;
+  width: 100%;
+}
+
+/* ---------- Animación de aparición al hacer scroll ---------- */
+/* Los elementos con clase .reveal inician invisibles; el script
+   en js/main.js les agrega .is-visible cuando entran en pantalla,
+   lo que dispara la misma animación fadeInUp ya usada en el hero. */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.reveal.is-visible {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Pequeño “float” en las ondas decorativas de las secciones */
+.wave-animated path {
+  animation: waveFloat 7s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes waveFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+/* Enlace de navegación activo (página actual) */
+.main-nav a.is-active {
+  color: var(--burnt-orange);
+}
+
+.main-nav a.is-active::after {
+  width: 100%;
+}
+
+/* Respeta la preferencia de "reducir movimiento" del sistema */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .animate-fade-in-up,
+  .hero-blob,
+  .gourmet-badge,
+  .wave-animated path {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ---------- Responsive: Contáctanos ---------- */
+@media (max-width: 960px) {
+  .contacto-inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .hero-blob--contacto {
+    width: 340px;
+    top: -80px;
+  }
+}
+
+@media (max-width: 560px) {
+  .contacto-inner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-form-wrapper {
+    padding: 28px 22px;
+  }
+
+  .ubicacion-inner {
+    padding: 0 20px;
+  }
+
+  .map-frame iframe {
+    height: 300px !important;
+  }
+}
+
+/* ==========================================================
+   PÁGINAS DE MENÚ (menu-comidas, menu-bebidas, menu-postres,
+   menu-cakes, menu-panaderia)
+   Bloque nuevo — reutiliza .hero, .eyebrow, .display-title,
+   .script-line, .wave-divider, .reveal, .btn, variables y
+   tokens ya definidos arriba. Nada de lo anterior se toca.
+   ========================================================== */
+
+/* ---------- Hero de menú (variante compacta de .hero) ---------- */
+.menu-hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+  padding-bottom: 56px;
+}
+
+/* ---------- Pestañas ---------- */
+.menu-page {
+  background: var(--cream-paper);
+  padding: 8px 0 128px;
+}
+
+.menu-tabs {
+  max-width: var(--max-width);
+  margin: 0 auto 48px;
+  padding: 0 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.menu-tab-btn {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--deep-coffee);
+  background: var(--pure-white);
+  border: 1.5px solid rgba(61, 35, 20, 0.15);
+  border-radius: var(--radius-button);
+  padding: 12px 26px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.menu-tab-btn:hover {
+  border-color: var(--burnt-orange);
+  color: var(--burnt-orange);
+  transform: translateY(-2px);
+}
+
+.menu-tab-btn.is-active {
+  background: var(--deep-coffee);
+  border-color: var(--deep-coffee);
+  color: var(--pure-white);
+  box-shadow: 0 6px 18px rgba(61, 35, 20, 0.22);
+}
+
+/* ---------- Paneles y grupos ---------- */
+.menu-panels {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.menu-panel {
+  display: none;
+}
+
+.menu-panel.is-active {
+  display: block;
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.menu-group + .menu-group {
+  margin-top: 48px;
+}
+
+.menu-subheading {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 22px;
+  color: var(--burnt-orange);
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(156, 21, 21, 0.18);
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ---------- Tarjeta de producto ---------- */
+.menu-card {
+  background: var(--pure-white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(61, 35, 20, 0.06);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.menu-card-thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--cream-paper);
+  overflow: hidden;
+}
+
+.menu-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.menu-card:hover .menu-card-thumb img {
+  transform: scale(1.06);
+}
+
+/* Tarjetas sin foto disponible: fondo suave con textura de puntos
+   en vez de una imagen rota */
+.menu-card-thumb--empty {
+  background:
+    radial-gradient(circle, rgba(61, 35, 20, 0.08) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-card-body {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.menu-card-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.menu-card-name {
+  font-family: var(--font-display);
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--deep-coffee);
+  line-height: 1.25;
+}
+
+.menu-price {
+  font-family: var(--font-ui);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--burnt-orange);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.menu-price--multi {
+  font-size: 12px;
+  white-space: normal;
+  text-align: right;
+}
+
+.menu-card-desc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(61, 35, 20, 0.78);
+}
+
+/* ---------- Responsive: menú ---------- */
+@media (max-width: 960px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .menu-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .menu-tab-btn {
+    flex-shrink: 0;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-tabs,
+  .menu-panels {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* ---------- Mega-menú "Menú" en el header ---------- */
+/* Reemplaza el enlace simple "Menú" por un desplegable con las
+   5 categorías. Ver <li class="has-dropdown"> en el header. */
+.main-nav .has-dropdown {
+  position: relative;
+}
+
+.main-nav .has-dropdown > a::after {
+  content: '';
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  background: var(--pure-white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-hover);
+  border: 1px solid rgba(61, 35, 20, 0.08);
+  padding: 10px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 60;
+}
+
+.has-dropdown:hover .nav-dropdown,
+.has-dropdown:focus-within .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown a {
+  display: block;
+  padding: 10px 14px;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--deep-coffee);
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-dropdown a:hover {
+  background: var(--cream-paper);
+  color: var(--burnt-orange);
+}
+
+@media (max-width: 960px) {
+  .nav-dropdown {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    border: none;
+    padding: 4px 0 4px 12px;
+    display: none;
+  }
+
+  .has-dropdown.is-open .nav-dropdown {
+    display: flex;
+  }
+}
