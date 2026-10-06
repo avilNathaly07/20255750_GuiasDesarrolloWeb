@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Desarrollo Web</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f6f8;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+        header h1 { margin: 0 0 8px; font-size: 2rem; }
+        header p { margin: 0; }
+        main {
+            width: min(1000px, 90%);
+            margin: 45px auto;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+        }
+        .guias {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+        .guia {
+            background: white;
+            padding: 28px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px rgba(0,0,0,.08);
+        }
+        .guia h3 { margin-top: 0; color: #2c3e50; }
+        .guia p { min-height: 75px; }
+        .guia a {
+            display: inline-block;
+            background: #2980b9;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 18px;
+            border-radius: 6px;
+        }
+        .guia a:hover { background: #1f6693; }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 25px;
+            color: #666;
+        }
+        @media (max-width: 750px) {
+            .guias { grid-template-columns: 1fr; }
+            .guia p { min-height: auto; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portafolio de Desarrollo Web</h1>
+        <p>Nathaly Elizabeth Avilés Monzón</p>
+    </header>
+
+    <main>
+        <h2>Guías de Laboratorio</h2>
+        <section class="guias">
+            <article class="guia">
+                <h3>Guía 1</h3>
+                <p>Ejercicios de estilos CSS y primer reto con inteligencia artificial.</p>
+                <a href="Guia 1/Guia 1/Index.html">Ver Guía 1</a>
+            </article>
+
+            <article class="guia">
+                <h3>Guía 2</h3>
+                <p>Ejercicios de maquetación, biografía, tablero y reto de rediseño web.</p>
+                <a href="Guia2/index_guia2.html">Ver Guía 2</a>
+            </article>
+
+            <article class="guia">
+                <h3>Guía 3</h3>
+                <p>Ejemplos, ejercicios de posicionamiento y reto de rediseño con CSS Grid.</p>
+                <a href="20255750_Guia3/index.html">Ver Guía 3</a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desarrollo Web · ESEN · 2026</p>
+    </footer>
+</body>
+</html>
