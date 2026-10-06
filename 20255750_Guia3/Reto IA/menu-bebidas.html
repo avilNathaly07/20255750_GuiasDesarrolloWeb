@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bebidas — La Panetière</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER (idéntico al de index.html, con el mega-menú de Menú) ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-accent"></span> La Panetière
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html#historia">Nuestra Historia</a>
+      <div class="menu-item has-dropdown" tabindex="0">
+      <a href="menu-comidas.html">Menú</a>
+      <div class="nav-dropdown">
+        <a href="menu-comidas.html">Comidas</a>
+        <a href="menu-bebidas.html">Bebidas</a>
+        <a href="menu-postres.html">Postres</a>
+        <a href="menu-cakes.html">Cakes</a>
+        <a href="menu-panaderia.html">Panadería y Repostería</a>
+      </div>
+    </div>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <a href="contacto.html#formulario" class="btn btn-primary btn-small">Haz tu Pedido</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-inner menu-hero-inner">
+    <div class="hero-copy reveal">
+      <p class="eyebrow"><span class="badge-dot"></span> Calientes · Frías · Naturales</p>
+      <h1 class="display-title">Bebidas</h1>
+      <p class="script-line">Para acompañar cada momento del día</p>
+    </div>
+  </div>
+
+  <svg class="wave-divider wave-animated" viewBox="0 0 1440 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="var(--burnt-orange)" d="M0,64 C240,140 420,10 720,48 C1020,86 1200,150 1440,72 L1440,160 L0,160 Z"/>
+  </svg>
+</section>
+
+<!-- ============ MENÚ: pestañas + tarjetas ============ -->
+<section class="menu-page" data-menu-key="bebidas">
+  <div class="menu-tabs" id="menuTabs" role="tablist"></div>
+  <div class="menu-panels"><section class="menu-static-section" id="bebidas-calientes"><div class="menu-group"><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/americano.jpg" alt="Americano" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Americano</h3><span class="menu-price menu-price--multi">$2.75 - Pequeño &nbsp;/&nbsp; $4.25 - Grande</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/capuccino1.jpg" alt="Capuccino" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Capuccino</h3><span class="menu-price menu-price--multi">$4.20 - Pequeño &nbsp;/&nbsp; $4.75 - Grande</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/cortadito.jpg" alt="Cortadito" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Cortadito</h3><span class="menu-price menu-price--multi">$2.75 - Pequeño &nbsp;/&nbsp; $3.35 - Grande</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Espresso</h3><span class="menu-price menu-price--multi">$2.50 - Pequeño &nbsp;/&nbsp; $3.25 - Grande</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Chai Latté Caliente</h3><span class="menu-price menu-price--multi">$4.50 - Pequeño &nbsp;/&nbsp; $4.75 - Grande</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/latte.jpg" alt="Latté" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Latté</h3><span class="menu-price menu-price--multi">$3.75 - Pequeño &nbsp;/&nbsp; $4.25 - Grande</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Cappuccino Moccha</h3><span class="menu-price menu-price--multi">$4.25 - Pequeño &nbsp;/&nbsp; $4.75 - Grande</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Cappuccino Royal</h3><span class="menu-price menu-price--multi">$4.25 - Pequeño &nbsp;/&nbsp; $4.75 - Grande</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Caramel Latté</h3><span class="menu-price menu-price--multi">$3.75 - Pequeño &nbsp;/&nbsp; $4.75 - Grande</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Té Caliente</h3><span class="menu-price menu-price--multi">$2.50 - Pequeño &nbsp;/&nbsp; $5.00 - Grande</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Mokalatté Swiss</h3><span class="menu-price menu-price--multi">$4.25 - Pequeño &nbsp;/&nbsp; $5.50 - Grande</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Chocolate Caliente</h3><span class="menu-price menu-price--multi">$4.00 - Pequeño &nbsp;/&nbsp; $4.50 - Grande</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Chocolate Swiss</h3><span class="menu-price menu-price--multi">$4.50 - Pequeño &nbsp;/&nbsp; $5.00 - Grande</span></div></div>
+</article></div></div></section>
+<section class="menu-static-section" id="bebidas-frías-de-café"><div class="menu-group"><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/frappecaramel.jpg" alt="Caramel Latté Frío" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Caramel Latté Frío</h3><span class="menu-price">$5.25</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Vainilla Latté Frío</h3><span class="menu-price">$5.25</span></div><p class="menu-card-desc">$5.25</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/mokalatte.jpg" alt="Icekaffe" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Icekaffe</h3><span class="menu-price">$5.40</span></div><p class="menu-card-desc">Cappuccino helado triturado con hielo, selección de sabores Moka, vainilla, caramelo.</p></div>
+</article></div></div></section>
+<section class="menu-static-section" id="bebidas-frías"><div class="menu-group"><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Té Helado instantaneo</h3><span class="menu-price">$4.75</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Horchata Frozen</h3><span class="menu-price">$4.85</span></div><p class="menu-card-desc">$4.85</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/chaitea.jpg" alt="Chai Tea Especies" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Chai Tea Especies</h3><span class="menu-price">$4.25</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Botella con Agua</h3><span class="menu-price">$1.50</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Sodas</h3><span class="menu-price">$2.00</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/taro.jpg" alt="Smoothie de Taro" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Smoothie de Taro</h3><span class="menu-price">$5.25</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/frozencoco.jpg" alt="Frozen de Coco" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Frozen de Coco</h3><span class="menu-price">$5.25</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/frozenmaracuya.jpg" alt="Frozen de Maracuyá" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Frozen de Maracuyá</h3><span class="menu-price">$5.25</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/arrayan.jpg" alt="Frozen de Arrayán" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Frozen de Arrayán</h3><span class="menu-price">$5.25</span></div></div>
+</article></div></div></section>
+<section class="menu-static-section" id="bebidas-naturales"><div class="menu-group"><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Jugo de Naranja</h3><span class="menu-price">$5.00</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/albahaca.jpg" alt="Limonada Natural" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Limonada Natural</h3><span class="menu-price">$4.75</span></div><p class="menu-card-desc">$4.75</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/jamaica.jpg" alt="Rosa de Jamaica" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Rosa de Jamaica</h3><span class="menu-price">$5.25</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Limonada con Soda</h3><span class="menu-price">$5.25</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Jugo de Zanahoria</h3><span class="menu-price">$5.25</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Combinado</h3><span class="menu-price">$5.25</span></div><p class="menu-card-desc">Zanahoria y Naranja</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/jugopapaya.jpg" alt="Batido" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Batido</h3><span class="menu-price">$5.00</span></div><p class="menu-card-desc">Fruta, leche y hielo</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/naturales.jpg" alt="Jugo Natural" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Jugo Natural</h3><span class="menu-price">$5.25</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/frozenfresa.jpg" alt="Frozen" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Frozen</h3><span class="menu-price">$5.00</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Smoothie</h3><span class="menu-price">$5.00</span></div><p class="menu-card-desc">Yogurt, hielo y frutas</p></div>
+</article></div></div></section></div>
+</section>
+
+<!-- ============ FOOTER (idéntico al de index.html) ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <p class="logo logo--light"><span class="logo-accent"></span> La Panetière</p>
+      <p>Desde 1993, horneando tradición en El Salvador.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <a href="menu-comidas.html">Menú</a>
+      <a href="index.html#historia">Nuestra Historia</a>
+      <a href="contacto.html">Contáctanos</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <a href="tel:22638017">2263-8017</a>
+      <a href="tel:22649937">2264-9937</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <div class="social-row">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer-legal">© 2026 La Panetière. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

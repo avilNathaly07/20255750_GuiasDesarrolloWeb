@@ -1,0 +1,23 @@
+/* RESULTADO 1: el as queda arriba de todas (z-index crece hacia el as) */
+body {
+    margin: 0;
+    padding: 0;
+}
+ 
+h1 {
+    margin: 20px;
+}
+ 
+#diez_de_diamantes,
+#sota_de_diamantes,
+#reina_de_diamantes,
+#rey_de_diamantes,
+#as_de_diamantes {
+    position: absolute;
+}
+ 
+#diez_de_diamantes  { top: 120px; left: 100px; z-index: 1; }
+#sota_de_diamantes  { top: 133px; left: 112px; z-index: 2; }
+#reina_de_diamantes { top: 146px; left: 124px; z-index: 3; }
+#rey_de_diamantes   { top: 159px; left: 136px; z-index: 4; }
+#as_de_diamantes    { top: 172px; left: 148px; z-index: 5; }

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comidas — La Panetière</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER (idéntico al de index.html, con el mega-menú de Menú) ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-accent"></span> La Panetière
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html#historia">Nuestra Historia</a>
+      <div class="menu-item has-dropdown" tabindex="0">
+      <a href="menu-comidas.html">Menú</a>
+      <div class="nav-dropdown">
+        <a href="menu-comidas.html">Comidas</a>
+        <a href="menu-bebidas.html">Bebidas</a>
+        <a href="menu-postres.html">Postres</a>
+        <a href="menu-cakes.html">Cakes</a>
+        <a href="menu-panaderia.html">Panadería y Repostería</a>
+      </div>
+    </div>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <a href="contacto.html#formulario" class="btn btn-primary btn-small">Haz tu Pedido</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-inner menu-hero-inner">
+    <div class="hero-copy reveal">
+      <p class="eyebrow"><span class="badge-dot"></span> Desayunos · Almuerzos · Cenas · Menú Ejecutivo</p>
+      <h1 class="display-title">Comidas</h1>
+      <p class="script-line">De la mañana a la noche, con sabor de casa</p>
+    </div>
+  </div>
+
+  <svg class="wave-divider wave-animated" viewBox="0 0 1440 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="var(--burnt-orange)" d="M0,64 C240,140 420,10 720,48 C1020,86 1200,150 1440,72 L1440,160 L0,160 Z"/>
+  </svg>
+</section>
+
+<!-- ============ MENÚ: pestañas + tarjetas ============ -->
+<section class="menu-page" data-menu-key="comidas">
+  <div class="menu-tabs" id="menuTabs" role="tablist"></div>
+  <div class="menu-panels"><section class="menu-static-section" id="desayunos"><div class="menu-group"><h3 class="menu-subheading">Desayunos</h3><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/vikingo.jpg" alt="El Vikingo" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">El Vikingo</h3><span class="menu-price">$10.50</span></div><p class="menu-card-desc">Huevos con vegetales salteados, fajitas de carne acompañado de frijoles salteados y plátanos.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/artesano.jpg" alt="El Artesano" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">El Artesano</h3><span class="menu-price">$8.75</span></div><p class="menu-card-desc">Huevos revueltos con vegetales y queso, sobre pan tres semillas, acompañado de frijoles guisados y plátanos.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/campesino.jpg" alt="Burrito Campesino" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Burrito Campesino</h3><span class="menu-price">$9.50</span></div><p class="menu-card-desc">Dos suavecitas tortillas de harina rellenas de huevo, cebolla y chile verde, y una deliciosa combinación de quesos, en una base de salsa ranchera, una excelente opción para arrancar con energía el día.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/burritocampesino.jpg" alt="Burrito Campesino con Loroco" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Burrito Campesino con Loroco</h3><span class="menu-price">$9.50</span></div><p class="menu-card-desc">Dos suavecitas tortillas de harina rellenas de huevo, loroco, cebolla y chile verde, y una deliciosa combinación de quesos, en una base de salsa ranchera, una excelente opción para arrancar con energía el día.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/completo.jpg" alt="El Completo" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">El Completo</h3><span class="menu-price">$9.25</span></div><p class="menu-card-desc">Huevos revueltos con cebolla, chile verde, tomate, acompañados de frijol, salsa roja, chorizo, plátano y pan horneado de la casa.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/croissant.jpg" alt="Panetiere Croissant" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Panetiere Croissant</h3><span class="menu-price">$8.50</span></div><p class="menu-card-desc">Suave y delicioso croissant de mantequilla con huevo, jamón de pavo y una combinación de quesos derretidos acompañado de tomates frescos con pesto y parmesano.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/cuscatleco.jpg" alt="Cuscatleco" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Cuscatleco</h3><span class="menu-price">$10.25</span></div><p class="menu-card-desc">Dos huevos estrellados sobre dos pupusas de queso, bañadas en salsa roja, acompañadas de frijoles y plátanos.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/dona.jpg" alt="Chilaquiles de la doña" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Chilaquiles de la doña</h3><span class="menu-price">$9.25</span></div><p class="menu-card-desc">Un huevo estrellado montado sobre chilaquiles de queso, bañadas en salasa roja, crema, cebolla morada, queso rallado</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/fritata.jpg" alt="Fritata Napolitana" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Fritata Napolitana</h3><span class="menu-price">$9.75</span></div><p class="menu-card-desc">Claras de huevos, tomate, albahaca y queso feta, acompañado con pan integral de la casa.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/fromage.jpg" alt="Omelette Jambón Fromage" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Omelette Jambón Fromage</h3><span class="menu-price">$9.50</span></div><p class="menu-card-desc">Omelette con jamón y queso gratinado con salsa bechamel y parmesano, acompañado de papas provenzal , frijoles y fruta fresca, servido con pan baguette y pan dulce.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/huevoloroco.jpg" alt="Huevo con Loroco" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Huevo con Loroco</h3><span class="menu-price">$9.00</span></div><p class="menu-card-desc">Huevos revueltos con loroco, cebolla y queso mozarella derretido, acompañado con frijoles, queso y fruta fresca.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/ojamon.jpg" alt="Omelette Jamón Light (348 calorías)" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Omelette Jamón Light (348 calorías)</h3><span class="menu-price">$9.00</span></div><p class="menu-card-desc">Omelette de 2 claras rellena de jamón de pavo, una lasca de queso mozarella, frijoles guisados, una rebanada de pan integral 100%.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/omeletteloroco.jpg" alt="Omelette" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Omelette</h3><span class="menu-price">$9.65</span></div><p class="menu-card-desc">Omelette con dos opciones a elegir: vegetales ó loroco, acompañado de frijoles, crema y plátano.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/perico.jpg" alt="Perico al Azteca" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Perico al Azteca</h3><span class="menu-price">$9.25</span></div><p class="menu-card-desc">Dos huevos revueltos con cebolla, chile verde y tomate, acompañados de frijol, queso fresco y plátanos servidos con pan de la casa y pan dulce.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/tipico.jpg" alt="Desayuno Típico" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Desayuno Típico</h3><span class="menu-price">$9.25</span></div><p class="menu-card-desc">Dos huevos revueltos o estrellados, acompañados de salsa ranchera, plátanos, frijoles fritos, queso o crema y nuestro delicioso pan de la casa recién horneado.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/nona.jpg" alt="Chilaquiles de la Nona" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Chilaquiles de la Nona</h3><span class="menu-price">$10.00</span></div><p class="menu-card-desc">Deliciosa combinación de nachos acompañados de pollo mechado, bañados en salsa roja y verde con dos huevos estrellados, cebolla blanca y cilantro.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/huevosencama.jpg" alt="Huevos cama separadas" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Huevos cama separadas</h3><span class="menu-price">$9.75</span></div><p class="menu-card-desc">Huevos estrellados montados en tortillas, bañados con salsa verde y roja, acompañadas de nachos enfrijolados con cebolla, crema y cilantro, servidos con pan baguette y pan dulce.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/croq.jpg" alt="Croq desayuno" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Croq desayuno</h3><span class="menu-price">$8.00</span></div><p class="menu-card-desc">Croissant relleno de huevos revueltos gratinados con salsa bechamel, acompañados con frijoles, servidos con pan baguette y pan dulce.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/mananero2.jpg" alt="Desayuno Mañanero" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Desayuno Mañanero</h3><span class="menu-price">$7.25</span></div><p class="menu-card-desc">Huevos a su gusto, frijoles volteados, acompañados de salsa ranchera y nuestro delicioso pan recién horneado</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/americano2.jpg" alt="Americano" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Americano</h3><span class="menu-price">$9.75</span></div><p class="menu-card-desc">Dos huevos estrellados acompañado de dos pancakes y tocino, servidos con pan baguette y pan dulce.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/bechamel.jpg" alt="Bechamel Deluxe" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Bechamel Deluxe</h3><span class="menu-price">$8.75</span></div><p class="menu-card-desc">Deliciosos huevos estrellados sobre pan ciabatta, gratinados con una mezcla de quesos, provolone, mozzarella y cheddar, acompañados con frijoles fritos y salsa bechamel</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/pigly.jpg" alt="Pigly" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Pigly</h3><span class="menu-price">$9.75</span></div><p class="menu-card-desc">Pan ciabatta con gratin de mezcla de quesos provolone, mozzarella, cheddar, tocino, montados con huevos estrellados, acompañados con plátano frijol frito y salsa bechamel</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/omelette.jpg" alt="Omelette Piperade" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Omelette Piperade</h3><span class="menu-price">$9.50</span></div><p class="menu-card-desc">Omelette con claras relleno con queso mozzarella y peperonata, frijoles guisados y requesón acompañado con pan integral.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/delacasa.jpg" alt="Desayuno de la casa" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Desayuno de la casa</h3><span class="menu-price">$7.75</span></div><p class="menu-card-desc">Un huevo estrellado sobre una lasca de jamón de pavo, frijoles guisados, opción de salsa verde o roja una rebanada de pan 100% integral, café o té</p></div>
+</article></div></div>
+<div class="menu-group"><h3 class="menu-subheading">Desayunos Dulces</h3><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/bonjour.jpg" alt="Bon jour" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Bon jour</h3><span class="menu-price">$8.70</span></div><p class="menu-card-desc">Deliciosas tostadas con nuestro pan integral canela y pasas, acompañado con banano y fresas.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/pancake.jpg" alt="Banana Strawberry Pancakes" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Banana Strawberry Pancakes</h3><span class="menu-price">$9.50</span></div><p class="menu-card-desc">Dos gigantescos pancakes rellenos de fresas frescas y banano, bañados en chocolate y cubiertos con crema batida.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/tostadafrancesa.jpg" alt="Tostadas Nevadas a la francesa" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Tostadas Nevadas a la francesa</h3><span class="menu-price">$9.20</span></div><p class="menu-card-desc">Tostadas a la francesa con nuestros pan integral canela y pasas, rellenas de requesón, montadas con fresas, banano y dulce de leche.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/tresleches.jpg" alt="Pancake tres leches" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Pancake tres leches</h3><span class="menu-price">$8.70</span></div><p class="menu-card-desc">Pancakes bañados con nuestra deliciosa salsa de la casa de caramelo, leche condensada y crema chantilly.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/yogurt.jpg" alt="Set sante con yogurt" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Set sante con yogurt</h3><span class="menu-price">$10.25</span></div><p class="menu-card-desc">Una copa de combinación de frutas de estación, acompañada de pan baguette y mermelada, con yogurt y granola</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/set.jpg" alt="Set Sante" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Set Sante</h3><span class="menu-price">$8.75</span></div><p class="menu-card-desc">Una copa de combinación de frutas de estación, acompañada de pan baguette y mermelada.</p></div>
+</article></div></div>
+<div class="menu-group"><h3 class="menu-subheading">Desayunos KETO</h3><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/keto1.jpg" alt="Keto 1" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Keto 1</h3><span class="menu-price">$9.50</span></div><p class="menu-card-desc">Tocino, huevos, aguacate, fresas y tomatada de la casa.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/keto2.jpg" alt="Keto 2" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Keto 2</h3><span class="menu-price">$1000</span></div><p class="menu-card-desc">Queso a la plancha, aguacate, fajitas de res, huevos y tomatada de la casa.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/keto3.jpg" alt="Keto 3" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Keto 3</h3><span class="menu-price">$9.50</span></div><p class="menu-card-desc">Chorizo argentino, queso a la plancha, tomates, huevos y salsa roja y verde.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/keto4.jpg" alt="Keto 4" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Keto 4</h3><span class="menu-price">$9.50</span></div><p class="menu-card-desc">Aguacate, chorizo argentino, omelette con hongos, espinaca y salsa verde y roja.</p></div>
+</article></div></div></section>
+<section class="menu-static-section" id="almuerzos"><div class="menu-group"><h3 class="menu-subheading">Entradas</h3><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/planchado.jpg" alt="Queso Planchado" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Queso Planchado</h3><span class="menu-price">$9.00</span></div><p class="menu-card-desc">Queso mantequilla a la plancha con aceite de oliva y albahaca, en una cama de tomate.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Pan con Ajo</h3><span class="menu-price">$5.00</span></div><p class="menu-card-desc">Pan baguette con mantequilola y ajo.</p></div>
+</article></div></div>
+<div class="menu-group"><h3 class="menu-subheading">Ensaladas</h3><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/mikonos.jpg" alt="Mikonos" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Mikonos</h3><span class="menu-price">$10.00</span></div><p class="menu-card-desc">Lechuga romana, peperonatta, queso feta, pechuguitas de pollo, aceitunas kalamata, aderezo griego, acompañada con pan baguette.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/malibu.jpg" alt="Malibu" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Malibu</h3><span class="menu-price">$11.00</span></div><p class="menu-card-desc">Fresas frescas, queso feta, mix de lechuga con arúgula y espinaca, almendras, maní caramelizado y aderezo balsámico, acompañado con pan baguette.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/ensaladapollo.jpg" alt="Ensalada de Pollo" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Ensalada de Pollo</h3><span class="menu-price">$10.00</span></div><p class="menu-card-desc">Combinación de lechuga, ensalada de pollo con almendras, tomate fresco y tostadas.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/ensaladacesar.jpg" alt="César con pollo" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">César con pollo</h3><span class="menu-price">$10.50</span></div><p class="menu-card-desc">Combinación de lechuga, croutons, aderezo cesar y queso parmesano</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/capresse.jpg" alt="Capresse" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Capresse</h3><span class="menu-price">$7.00</span></div><p class="menu-card-desc">Rebanadas de tomate fresco, tomates cherry, albahaca fresca y queso mozarella.</p></div>
+</article></div></div>
+<div class="menu-group"><h3 class="menu-subheading">Quiche</h3><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/tresquesos.jpg" alt="Tres Quesos" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Tres Quesos</h3><span class="menu-price menu-price--multi">$10.50 - Combo &nbsp;/&nbsp; $8.00 - Porción</span></div><p class="menu-card-desc">Mozarella, suizo y parmesano.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/tocino.jpg" alt="Tocino" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Tocino</h3><span class="menu-price menu-price--multi">$10.50 - Combo &nbsp;/&nbsp; $8.00 - Porción</span></div><p class="menu-card-desc">Tocino y cebolla.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Esparragos</h3><span class="menu-price menu-price--multi">$10.50 - Combo &nbsp;/&nbsp; $8.00 - Porción</span></div><p class="menu-card-desc">Mozzarella y esparragos.</p></div>
+</article></div></div>
+<div class="menu-group"><h3 class="menu-subheading">Sopas y Cremas</h3><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/tomate.jpg" alt="Sopa de tomate" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Sopa de tomate</h3><span class="menu-price menu-price--multi">$8.00 - Entera &nbsp;/&nbsp; $7.50 - Media</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/lentejas.jpg" alt="Sopa de Lentejas" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Sopa de Lentejas</h3><span class="menu-price menu-price--multi">$9.00 - Entera &nbsp;/&nbsp; $8.50 - Media</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Crema de Esparragos</h3><span class="menu-price menu-price--multi">$8.00 - Entera &nbsp;/&nbsp; $7.50 - Media</span></div></div>
+</article></div></div>
+<div class="menu-group"><h3 class="menu-subheading">Pizzas</h3><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/jamonyqueso.jpg" alt="Jamón y queso" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Jamón y queso</h3><span class="menu-price">$9.50</span></div><p class="menu-card-desc">Salsa de tomates, queso mozarella, jámon virginia.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Champi Queso</h3><span class="menu-price">$10.00</span></div><p class="menu-card-desc">Salsa de tomates, queso mozarella, hongos al vino, aceite de oliva y queso parmesano.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/margarita.jpg" alt="Margarita" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Margarita</h3><span class="menu-price">$10.00</span></div><p class="menu-card-desc">Salsa de tomates, queso mozarella, tomates frescos, albahaca fresca.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Hawaii 5-0</h3><span class="menu-price">$10.50</span></div><p class="menu-card-desc">Salsa de tomates, queso mozarella, jamón virginia, piña en trocitos.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Bowl de Ensalada</h3><span class="menu-price">$4.25</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Formula Italiana</h3><span class="menu-price">$21.99*</span></div><p class="menu-card-desc">2 Pizzas + 2 bowl de ensalada + 2 te helado con refil.</p></div>
+</article></div></div>
+<div class="menu-group"><h3 class="menu-subheading">Crepas Saladas</h3><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Normando</h3><span class="menu-price">$8.50</span></div><p class="menu-card-desc">Jamón de pavo, queso cheddar y salsa bechamel.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Forestiere</h3><span class="menu-price">$9.00</span></div><p class="menu-card-desc">Hongos al vino blanco, salsa bechamel y queso suizo.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/breton.jpg" alt="Breton" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Breton</h3><span class="menu-price">$9.00</span></div><p class="menu-card-desc">Pechugas de pollo, salsa bechamel, queso zuizo y parmesano.</p></div>
+</article></div></div>
+<div class="menu-group"><h3 class="menu-subheading">Sándwiches</h3><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/capressesand.jpg" alt="Capresse" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Capresse</h3><span class="menu-price">$9.50</span></div><p class="menu-card-desc">Tomate, queso parmesano y mozarella, albahaca, salsa marinara y pesto en pan baguette, acompañado con ensalada de papa o ensalada fresca.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/positano.jpg" alt="Positano" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Positano</h3><span class="menu-price">$9.50</span></div><p class="menu-card-desc">Trocitos de pechuga de pollo, queso mozarella, salsa marinara y pesto, servido en pan baguette, acompañado con ensalada de papa o ensalada fresca.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/superk.jpg" alt="Super K" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Super K</h3><span class="menu-price">$12.00</span></div><p class="menu-card-desc">Deliciosa combinación de jamón de pavo, jamón virginia, salami y queso suizo, lechuga, cebolla, tomate y aderezo de la casa, servido en pan flauta con ajonjolí, acompañado con ensalada de papas o ensalada fresca.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/sandwichpollo.jpg" alt="Pollo" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Pollo</h3><span class="menu-price">$12.00</span></div><p class="menu-card-desc">Flauta rellena con nuestra ensalada de pollo, cebolla y lechuga, acompañado con ensalada de papa o ensalada fresca.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/steak.jpg" alt="Steak" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Steak</h3><span class="menu-price">$11.00</span></div><p class="menu-card-desc">Baguette con aderezo balsámico, steak de carne, cebolla caramelizada con hongos, queso suizo, bañado con una salsa de hongos, servido en pan baguette, acompañado con ensalada de papa o ensalada fresca.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Media Noche</h3><span class="menu-price">$9.00</span></div><p class="menu-card-desc">Jamón virginia, queso cheddar fundido en pan baguette, acompañado con ensalada de papa o ensalada fresca.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Vegetariano</h3><span class="menu-price">$10.00</span></div><p class="menu-card-desc">Flauta rellena de queso mozarella y queso cheddar acompañado de lechuga, palmito, tomate, aros de cebolla morada, aceitunas, aguacate y aderezo de la casa, acompañado con ensalada de papas o ensalada fresca.</p></div>
+</article></div></div>
+<div class="menu-group"><h3 class="menu-subheading">Pastas</h3><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/lasagnatresquesos.jpg" alt="Lasagna Tres Quesos" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Lasagna Tres Quesos</h3><span class="menu-price">$7.25</span></div><p class="menu-card-desc">Mezcla de tres quesos con salsa bechamel, acompañado con ensalada fresca.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Lasagna con Hongos</h3><span class="menu-price">$8.00</span></div><p class="menu-card-desc">Mezcla de tres quesos con salsa bechamel y hongos, acompañado con ensalada fresca.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/lasagnaloroco.jpg" alt="Lasagna con Loroco" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Lasagna con Loroco</h3><span class="menu-price">$7.25</span></div><p class="menu-card-desc">Mezcla de tres quesos con salsa bechamel y loroco, acompañado con ensalada fresca.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/lasagnapollo.jpg" alt="Lasagna con Pollo" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Lasagna con Pollo</h3><span class="menu-price">$8.00</span></div><p class="menu-card-desc">Mezcla de tres quesos con salsa bechamel y pollo, acompañado con ensalada fresca.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/fetuccini.jpg" alt="Fetuccini en Salsa Bechamel y Alcaparras" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Fetuccini en Salsa Bechamel y Alcaparras</h3><span class="menu-price">$7.00</span></div><p class="menu-card-desc">Fetuccini en salsa bechamel, acompañado de alcaparras.</p></div>
+</article></div></div></section>
+<section class="menu-static-section" id="ejecutivo"><div class="menu-group"><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/lasagna1.jpg" alt="Lasagna Tres Quesos" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Lasagna Tres Quesos</h3><span class="menu-price">$9.75</span></div><p class="menu-card-desc">Acompañado con ensalada fresca + soda o té helado</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/normando.jpg" alt="Crepa Normando" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Crepa Normando</h3><span class="menu-price">$9.75</span></div><p class="menu-card-desc">Acompañado con ensalada fresca + sopa de tomate + soda o té helado</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/kaiser.jpg" alt="Kaiser Roll de Pollo" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Kaiser Roll de Pollo</h3><span class="menu-price">$9.75</span></div><p class="menu-card-desc">Acompañado con ensalada fresca + sopa de tomate + soda o té helado</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Kaiser Roll Vegetariano</h3><span class="menu-price">$9.75</span></div><p class="menu-card-desc">Acompañado con ensalada fresca + sopa de tomate + soda o té helado</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Kaiser Roll con Jamón y Queso</h3><span class="menu-price">$9.75</span></div><p class="menu-card-desc">Acompañado con ensalada fresca + sopa de tomate + soda o té helado</p></div>
+</article></div></div></section></div>
+</section>
+
+<!-- ============ FOOTER (idéntico al de index.html) ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <p class="logo logo--light"><span class="logo-accent"></span> La Panetière</p>
+      <p>Desde 1993, horneando tradición en El Salvador.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <a href="menu-comidas.html">Menú</a>
+      <a href="index.html#historia">Nuestra Historia</a>
+      <a href="contacto.html">Contáctanos</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <a href="tel:22638017">2263-8017</a>
+      <a href="tel:22649937">2264-9937</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <div class="social-row">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer-legal">© 2026 La Panetière. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

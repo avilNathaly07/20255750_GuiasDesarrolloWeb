@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cakes — La Panetière</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER (idéntico al de index.html, con el mega-menú de Menú) ============ -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-accent"></span> La Panetière
+    </a>
+
+    <nav class="main-nav">
+      <a href="index.html#historia">Nuestra Historia</a>
+      <div class="menu-item has-dropdown" tabindex="0">
+      <a href="menu-comidas.html">Menú</a>
+      <div class="nav-dropdown">
+        <a href="menu-comidas.html">Comidas</a>
+        <a href="menu-bebidas.html">Bebidas</a>
+        <a href="menu-postres.html">Postres</a>
+        <a href="menu-cakes.html">Cakes</a>
+        <a href="menu-panaderia.html">Panadería y Repostería</a>
+      </div>
+    </div>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <a href="contacto.html#formulario" class="btn btn-primary btn-small">Haz tu Pedido</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-inner menu-hero-inner">
+    <div class="hero-copy reveal">
+      <p class="eyebrow"><span class="badge-dot"></span> Clásicos · Especiales · Línea Cero Azúcar · Pies</p>
+      <h1 class="display-title">Cakes</h1>
+      <p class="script-line">Para tus celebraciones más dulces</p>
+    </div>
+  </div>
+
+  <svg class="wave-divider wave-animated" viewBox="0 0 1440 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path fill="var(--burnt-orange)" d="M0,64 C240,140 420,10 720,48 C1020,86 1200,150 1440,72 L1440,160 L0,160 Z"/>
+  </svg>
+</section>
+
+<!-- ============ MENÚ: pestañas + tarjetas ============ -->
+<section class="menu-page" data-menu-key="cakes">
+  <div class="menu-tabs" id="menuTabs" role="tablist"></div>
+  <div class="menu-panels"><section class="menu-static-section" id="cakes-clásicos"><div class="menu-group"><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/almond.jpg" alt="Almond Crunch" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Almond Crunch</h3><span class="menu-price">$38.00 - Grande</span></div><p class="menu-card-desc">Torta envinada, relleno de crema chantilly, maní crocante, con dulce caramelizado.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/mousse.jpg" alt="Brownie Mousse de Chocolate" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Brownie Mousse de Chocolate</h3><span class="menu-price">$43.00 - Grande</span></div><p class="menu-card-desc">Merengue horneado con nueces, brownie y mousse de chocolate.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/caramelosuave.jpg" alt="Caramelo Suave Especial" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Caramelo Suave Especial</h3><span class="menu-price menu-price--multi">$39.00 - Grande &nbsp;/&nbsp; $32.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho de vainilla, humedecido con vino, relleno de caramelo suave especial con macadamias.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/imperial.jpg" alt="Imperial" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Imperial</h3><span class="menu-price">$40.00 - Grande</span></div><p class="menu-card-desc">Merengue horneado, relleno de mousse de chocolate y decorado con almendras.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/moka.jpg" alt="Mokasupreme" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Mokasupreme</h3><span class="menu-price">$40.00 - Grande</span></div><p class="menu-card-desc">Merengue horneado, con almendras, cubierto con crema crema chantilly ,con un toque de café.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/tropical.jpg" alt="Shortcake Tropical" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Shortcake Tropical</h3><span class="menu-price menu-price--multi">$40.00 - Grande &nbsp;/&nbsp; $33.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho de vainilla relleno de crema chantilly, cubierto con frutas tropicales y coco rallado alrededor.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/tortachilena.jpg" alt="Torta Chilena" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Torta Chilena</h3><span class="menu-price">$38.00</span></div><p class="menu-card-desc">Capas de galleta de mantequilla, relleno con dulce de leche y turrón alrededor.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/tartaleta.jpg" alt="Tartaleta Tropical" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Tartaleta Tropical</h3><span class="menu-price">$29.00 - Grande</span></div><p class="menu-card-desc">Galleta de mantequilla, relleno de babarua, con fresa, kiwi, uva y melocotón.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/chocomacadamia.jpg" alt="Chocomacadamia" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Chocomacadamia</h3><span class="menu-price menu-price--multi">$39.00 - Grande &nbsp;/&nbsp; $30.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho de chocolate, relleno con chocolate y macadamias.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/chocosupreme.jpg" alt="Choco Supreme" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Choco Supreme</h3><span class="menu-price menu-price--multi">$36.00 - Grande &nbsp;/&nbsp; $28.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho de chocolate, relleno con chocolate, cubierto con ralladura de chocolate.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/rainbow.jpg" alt="Choco Rainbow" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Choco Rainbow</h3><span class="menu-price menu-price--multi">$35.00 - Grande &nbsp;/&nbsp; $26.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho de chocolate, relleno con fudge de chocolate y galleta oreo, cubierto con ganache de chocolate, decorado con My M.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/selvanegra.jpg" alt="Selva Negra" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Selva Negra</h3><span class="menu-price menu-price--multi">$38.00 - Grande &nbsp;/&nbsp; $31.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho de chocolate, relleno con crema chantilly y cereza, humedecido con licor de cerezas.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/saint.jpg" alt="Saint Honoré" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Saint Honoré</h3><span class="menu-price">$37.00</span></div><p class="menu-card-desc">Profiteroles rellenos con crema pastelera, con mousse de chocolate blanco, fesas y caramelo crocante.</p></div>
+</article></div></div></section>
+<section class="menu-static-section" id="cakes"><div class="menu-group"><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/cakefresas.jpg" alt="Cake de Fresas" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Cake de Fresas</h3><span class="menu-price menu-price--multi">$36.00 - Grande &nbsp;/&nbsp; $28.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho de vainilla, relleno con jalea de fresas y crema pastelera, cubierto con fresas y turrón flameado alrededor.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/cake-fresas-crema.jpg" alt="Cake de Fresas con crema" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Cake de Fresas con crema</h3><span class="menu-price menu-price--multi">$36.00 - Grande &nbsp;/&nbsp; $28.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho de vainilla, relleno con jalea de fresas y crema pastelera, cubierto con fresas y turrón flameado alrededor.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/cardenal.jpg" alt="Cardenal de fresas" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Cardenal de fresas</h3><span class="menu-price menu-price--multi">$48.00 - Grande &nbsp;/&nbsp; $41.00 - Pequeño</span></div><p class="menu-card-desc">Espumilla, crema chantilly, y fresas.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Cardenal de extras fresas y extra crema</h3><span class="menu-price menu-price--multi">$52.00 - Grande &nbsp;/&nbsp; $45.00 - Pequeño</span></div><p class="menu-card-desc">Espumilla, crema chantilly, y fresas.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/silvestre.jpg" alt="Crema Silvestre" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Crema Silvestre</h3><span class="menu-price">$36.00 - Grande</span></div><p class="menu-card-desc">Torta de vainilla relleno, con crema chantilly de mora y crema chantilly de piña, cubierto con kiwi, fresas y coco rallado alrededor.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/garabato.jpg" alt="Garabato de Nutella" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Garabato de Nutella</h3><span class="menu-price">$25.00 - Pequeño</span></div><p class="menu-card-desc">Torta enrollada de vainilla, relleno de nutella, cubierto con turrón flameado.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/dolchefetti2.jpg" alt="Dolchefetti" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Dolchefetti</h3><span class="menu-price menu-price--multi">$36.00 - Grande &nbsp;/&nbsp; $28.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho de vainilla, relleno con dulce de leche, cubierto con betún de mantequilla y queso, y dulces de colores.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/kahlua.jpg" alt="Kahlúa" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Kahlúa</h3><span class="menu-price menu-price--multi">$36.00 - Grande &nbsp;/&nbsp; $28.00 - Pequeño</span></div><p class="menu-card-desc">Torta de chocolate, rellena de crema chantilly, mojada con licor de kalua, cubierto con chocolate blanco.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/medianoche1.jpg" alt="Media Noche de caramelo" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Media Noche de caramelo</h3><span class="menu-price menu-price--multi">$36.00 - Grande &nbsp;/&nbsp; $28.00 - Pequeño</span></div><p class="menu-card-desc">Torta de vainilla, y torta de chocolate, relleno de caramelo y crema chantilly.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/ny.jpg" alt="N.Y. Cheesecake" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">N.Y. Cheesecake</h3><span class="menu-price menu-price--multi">$49.00 - Grande &nbsp;/&nbsp; $38.00 - Pequeño</span></div><p class="menu-card-desc">Pastel de queso decorado con fresas o caramelo.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/pionono.jpg" alt="Pionono" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Pionono</h3><span class="menu-price">$25.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho enrollada de vainilla rellena de caramelo, bañado con turrón y caramelo.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/pionono-almond.jpg" alt="Pionono con almendras" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Pionono con almendras</h3><span class="menu-price">$26.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho enrollada de vainilla rellena de caramelo, bañado con turrón y caramelo.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/pionono-fresas-crema.png" alt="Pionono con fresas" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Pionono con fresas</h3><span class="menu-price">$25.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho de vainilla, relleno con jalea de fresas y crema pastelera, cubierto con fresas y turrón flameado alrededor.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/seduccion-blanco.jpg" alt="Seducción de Chocolate" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Seducción de Chocolate</h3><span class="menu-price menu-price--multi">$36.00 - Grande &nbsp;/&nbsp; $28.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho de vainilla relleno con mousse de fresas cubierta de seductor ganache de chocolate blanco y trozos de espumilla.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/tiramisu.jpg" alt="Tiramizu" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Tiramizu</h3><span class="menu-price">$38.00 - Grande</span></div><p class="menu-card-desc">Torta de vainilla bañada con licor de café, relleno de mousse de queso, cubierto con cocoa y suspiros alrededor.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/bayleis.jpg" alt="Tres Leches con Baileys" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Tres Leches con Baileys</h3><span class="menu-price">$12.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho de vainilla, humedecido con tres leches y baileys.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Tres Leches con Dulce de leche</h3><span class="menu-price">$25.00</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb menu-card-thumb--empty"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Tres Leches con Turron</h3><span class="menu-price">$25.00</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/zanahoria.jpg" alt="Zanahoria" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Zanahoria</h3><span class="menu-price menu-price--multi">$39.00 - Grande &nbsp;/&nbsp; $31.00 - Pequeño</span></div><p class="menu-card-desc">Torta de zanahori, relleno con betun de mantequilla y queso, cubierto con betun de mantequilla y queso con almendras alrededor.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/cardenal-tropical.jpg" alt="Cardenal Tropical" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Cardenal Tropical</h3><span class="menu-price menu-price--multi">$52.00 - Grande &nbsp;/&nbsp; $45.00 - Pequeño</span></div><p class="menu-card-desc">Espumilla, crema chantilly, uva, fresas, kiwi, melocoton, piña y arandanos.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/cardenal-melocoton.jpg" alt="Cardenal de melocotón" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Cardenal de melocotón</h3><span class="menu-price menu-price--multi">$52.00 - Grande &nbsp;/&nbsp; $45.00 - Pequeño</span></div><p class="menu-card-desc">Espumilla, crema chantilly, melocoton.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/cardenal-caramelo.png" alt="Cardenal con caramelo" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Cardenal con caramelo</h3><span class="menu-price menu-price--multi">$52.00 - Grande &nbsp;/&nbsp; $45.00 - Pequeño</span></div><p class="menu-card-desc">Espumilla, crema chantilly, fresas y caramelo.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/merengon.jpg" alt="Merengon de fresas" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Merengon de fresas</h3><span class="menu-price">$30.00 - Grande</span></div><p class="menu-card-desc">Merengue horneado con almendras, caramelo , crema chantilly, fresas.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/chocofresas.jpg" alt="Choco fresas" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Choco fresas</h3><span class="menu-price menu-price--multi">$36.00 - Grande &nbsp;/&nbsp; $28.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho de vainilla, relleno con mousse de fresas y jalea de fresas, cubierto con crema de chocolate, decorado con fresas.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/redvelvet.jpg" alt="Red Velvet" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Red Velvet</h3><span class="menu-price menu-price--multi">$37.00 - Grande &nbsp;/&nbsp; $28.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho rojo, relleno con betun de mantequi y queso, decorado con ralladura de chocolate blanco, fresas, brigadiros y arandanos.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/perverso3.jpg" alt="Perverso de chocolate" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Perverso de chocolate</h3><span class="menu-price menu-price--multi">$36.00 - Grande &nbsp;/&nbsp; $28.00 - Pequeño</span></div><p class="menu-card-desc">Bizcocho de chocolate, relleno con fudge de chocolate, cubierto con crema de chocolate y ganache de chocolate.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/chiclosito.jpg" alt="Chiclosito" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Chiclosito</h3><span class="menu-price">$28.00 - Pequeño</span></div><p class="menu-card-desc">Torta de queso y mantequilla, centro chicloso, decorado con fresas y arandanos.</p></div>
+</article></div></div></section>
+<section class="menu-static-section" id="cakes-línea-cero-azucar"><div class="menu-group"><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/cheesefresas.jpg" alt="Cheesecake 0/A" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Cheesecake 0/A</h3><span class="menu-price menu-price--multi">$49.00 - Grande &nbsp;/&nbsp; $38.00 - Pequeños</span></div><p class="menu-card-desc">8 porciones.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/fresiere.jpg" alt="Fressiere 0/A" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Fressiere 0/A</h3><span class="menu-price">$31.00</span></div><p class="menu-card-desc">8 Porciones</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/short.jpg" alt="Shorcake Tropical 0/A" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Shorcake Tropical 0/A</h3><span class="menu-price menu-price--multi">$43.00 - Grande &nbsp;/&nbsp; $33.00 - Pequeño</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/piemanzana0a.jpg" alt="Pie de Manzana y Queso 0/A" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Pie de Manzana y Queso 0/A</h3><span class="menu-price">$30.00</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/tartaletamanzana.jpg" alt="Tartaleta de Manzana 0/A" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Tartaleta de Manzana 0/A</h3><span class="menu-price">$33.00</span></div></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/shortfresas.jpg" alt="Strawberry Shortcake 0/A" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Strawberry Shortcake 0/A</h3><span class="menu-price menu-price--multi">$40.00 - Grande &nbsp;/&nbsp; $30.00 - Pequeño</span></div></div>
+</article></div></div></section>
+<section class="menu-static-section" id="pies"><div class="menu-group"><div class="menu-grid"><article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/piebanana.jpg" alt="Banana Cream Pie" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Banana Cream Pie</h3><span class="menu-price">$26.00</span></div><p class="menu-card-desc">Base de galleta de mantequilla rellena de crema de banano decorada con crema chantilli.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/pielimon2.jpg" alt="Key Lime Pie" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Key Lime Pie</h3><span class="menu-price">$26.00</span></div><p class="menu-card-desc">Base de galleta de mantequilla rellena de crema de limón con queso.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/pie-higo.jpg" alt="Pie de Higo" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Pie de Higo</h3><span class="menu-price">$29.00</span></div><p class="menu-card-desc">Galleta de mantequilla rellena de higos cremas y especies.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/piemanzana0a.jpg" alt="Pie de Manzana Queso" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Pie de Manzana Queso</h3><span class="menu-price">$29.00</span></div><p class="menu-card-desc">Galleta de mantequilla, relleno con queso cubierto con manzana.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/pie-pecan.jpg" alt="Pie Pecana" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Pie Pecana</h3><span class="menu-price">$24.00</span></div><p class="menu-card-desc">Descripcion</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/banoffee.jpg" alt="Banoffee Pie" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Banoffee Pie</h3><span class="menu-price">$23.00</span></div><p class="menu-card-desc">Relleno con dulce de leche, rodajas de banano, decorado con crema y almendras.</p></div>
+</article>
+<article class="menu-card">
+<div class="menu-card-thumb"><img src="img/menu/pecan-apple-pie.png" alt="Pecan Apple pie" loading="lazy"></div>
+<div class="menu-card-body"><div class="menu-card-top"><h3 class="menu-card-name">Pecan Apple pie</h3><span class="menu-price">$20.00</span></div><p class="menu-card-desc">Base de pecanas caramelizadas, relleno con manzana</p></div>
+</article></div></div></section></div>
+</section>
+
+<!-- ============ FOOTER (idéntico al de index.html) ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <p class="logo logo--light"><span class="logo-accent"></span> La Panetière</p>
+      <p>Desde 1993, horneando tradición en El Salvador.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <a href="menu-comidas.html">Menú</a>
+      <a href="index.html#historia">Nuestra Historia</a>
+      <a href="contacto.html">Contáctanos</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <a href="tel:22638017">2263-8017</a>
+      <a href="tel:22649937">2264-9937</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Síguenos</h4>
+      <div class="social-row">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer-legal">© 2026 La Panetière. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
