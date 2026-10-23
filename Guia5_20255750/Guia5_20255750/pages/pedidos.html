@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>La Panetiere· Gestión de pedidos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+        :root {
+            --coffee: #4b3027;
+            --brown: #795543;
+            --cream: #faf7f2;
+            --sand: #e9dfd2;
+            --ink: #302820;
+            --olive: #78816b
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            background: var(--cream);
+            color: var(--ink);
+            font-family: 'DM Sans', sans-serif
+        }
+
+        .topbar {
+            border-bottom: 1px solid #e9e1d7;
+            background: #fffdfa
+        }
+
+        .topbar-inner {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px
+        }
+
+        .brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.55rem;
+            font-weight: 700;
+            color: var(--coffee);
+            text-decoration: none
+        }
+
+        .brand span {
+            color: #b08a67
+        }
+
+        .back-link {
+            color: var(--brown);
+            text-decoration: none;
+            font-size: .9rem
+        }
+
+        .back-link:hover {
+            text-decoration: underline
+        }
+
+        .wrapper {
+            max-width: 1150px;
+            margin: auto;
+            padding: 32px 22px 70px
+        }
+
+        .hero {
+            background: linear-gradient(110deg, #4c3027 0%, #775342 70%, #9a765e 100%);
+            border-radius: 22px;
+            padding: 42px 46px;
+            color: #fff;
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero:after {
+            content: "☕";
+            position: absolute;
+            right: 5%;
+            top: -38px;
+            font-size: 210px;
+            opacity: .12;
+            transform: rotate(-16deg)
+        }
+
+        .eyebrow {
+            font-size: .72rem;
+            letter-spacing: .18em;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #dfc5a8
+        }
+
+        h1,
+        h2,
+        .stat-value {
+            font-family: 'Playfair Display', serif
+        }
+
+        h1 {
+            font-size: clamp(2rem, 4vw, 3.1rem);
+            font-weight: 600;
+            margin: 12px 0
+        }
+
+        .hero p {
+            color: #f1e3d5;
+            max-width: 520px;
+            margin: 0
+        }
+
+        .content-card {
+            background: #fff;
+            border: 1px solid #ede5db;
+            border-radius: 19px;
+            box-shadow: 0 8px 30px rgba(70, 45, 30, .045);
+            padding: 29px;
+            margin-top: 24px
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 22px
+        }
+
+        .section-icon {
+            display: grid;
+            place-items: center;
+            width: 43px;
+            height: 43px;
+            border-radius: 12px;
+            background: #f3e9de;
+            color: var(--brown);
+            font-size: 1.25rem
+        }
+
+        h2 {
+            font-size: 1.65rem;
+            margin: 0;
+            color: var(--coffee)
+        }
+
+        .section-sub {
+            font-size: .86rem;
+            color: #8a8178;
+            margin-top: 3px
+        }
+
+        .form-label {
+            font-weight: 700;
+            font-size: .83rem;
+            color: #56463b;
+            margin-bottom: 8px
+        }
+
+        .form-control {
+            background: #fffdfb;
+            border: 1px solid #ded5cb;
+            border-radius: 10px;
+            min-height: 48px;
+            padding: 10px 14px;
+            color: var(--ink)
+        }
+
+        .form-control:focus {
+            border-color: #a8896e;
+            box-shadow: 0 0 0 .2rem rgba(121, 85, 67, .13)
+        }
+
+        .btn {
+            border-radius: 10px;
+            font-weight: 700;
+            padding: 11px 18px
+        }
+
+        .btn-cafe {
+            background: var(--coffee);
+            border: 1px solid var(--coffee);
+            color: white
+        }
+
+        .btn-cafe:hover {
+            background: #684736;
+            border-color: #684736;
+            color: white
+        }
+
+        .btn-soft {
+            border: 1px solid #d9cfc3;
+            color: var(--coffee);
+            background: #fff
+        }
+
+        .btn-soft:hover {
+            background: #f6f0e9;
+            color: var(--coffee)
+        }
+
+        .btn-clear {
+            border: 1px solid #e4c5bb;
+            color: #a34f40;
+            background: #fff
+        }
+
+        .btn-clear:hover {
+            background: #fff1ee;
+            color: #a34f40
+        }
+
+        .filter-area {
+            background: #faf7f2;
+            border: 1px solid #eee7de;
+            border-radius: 14px;
+            padding: 19px;
+            margin-bottom: 20px
+        }
+
+        .table {
+            --bs-table-striped-bg: #fbf8f4;
+            --bs-table-hover-bg: #f4ede5;
+            margin-bottom: 0
+        }
+
+        .table thead th {
+            background: #f0e7db;
+            color: #654a39;
+            border-bottom: 0;
+            font-size: .82rem;
+            padding: 15px 16px;
+            white-space: nowrap
+        }
+
+        .table tbody td {
+            padding: 17px 16px;
+            border-color: #eee8e0;
+            color: #45382f
+        }
+
+        .table-wrap {
+            border: 1px solid #eae1d6;
+            border-radius: 13px;
+            overflow: hidden
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 20px
+        }
+
+        .stat {
+            background: #f7f1e9;
+            border: 1px solid #ede2d5;
+            border-radius: 14px;
+            padding: 21px
+        }
+
+        .stat:last-child {
+            background: #eef0e9;
+            border-color: #e2e7da
+        }
+
+        .stat-label {
+            font-size: .85rem;
+            color: #73685d;
+            font-weight: 700
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--coffee);
+            margin-top: 4px
+        }
+
+        .stat:last-child .stat-value {
+            color: #58674b
+        }
+
+        .small-note {
+            color: #8c8175;
+            font-size: .8rem;
+            margin-top: 14px
+        }
+
+        .alert {
+            border-radius: 11px;
+            border-width: 1px
+        }
+
+        .footer {
+            text-align: center;
+            font-size: .82rem;
+            color: #a09385;
+            margin-top: 28px
+        }
+
+        @media(max-width:650px) {
+            .wrapper {
+                padding: 18px 12px 45px
+            }
+
+            .hero {
+                padding: 30px 24px
+            }
+
+            .hero:after {
+                font-size: 140px;
+                top: 0
+            }
+
+            .content-card {
+                padding: 20px
+            }
+
+            .stats {
+                grid-template-columns: 1fr
+            }
+
+            .topbar-inner {
+                padding: 15px
+            }
+
+            .filter-buttons .btn {
+                width: 100%
+            }
+        }
+    </style>
+    <script src="../js/pedidos.js" defer></script>
+</head>
+
+<body>
+    <nav class="topbar">
+        <div class="topbar-inner"><a class="brand" href="../index.html">La <span>Pateniere</span></a><a class="back-link"
+                href="../index.html">← Volver a la guía</a></div>
+    </nav>
+    <main class="wrapper">
+        <header class="hero">
+            <div class="eyebrow">CAFETERÍA · PANEL DE CONTROL</div>
+            <h1>Gestión de pedidos</h1>
+        </header>
+        <section class="content-card" aria-labelledby="tituloRegistro">
+            <div class="section-heading">
+                <div class="section-icon">＋</div>
+                <div>
+                    <h2 id="tituloRegistro">Nuevo pedido</h2>
+                    <div class="section-sub">Completá los datos para agregar un producto</div>
+                </div>
+            </div>
+            <form id="formPedido" novalidate>
+                <div class="row g-3">
+                    <div class="col-md-5"><label for="producto" class="form-label">Nombre del producto</label><input
+                            id="producto" class="form-control" type="text" placeholder="Ej. Café americano" required>
+                    </div>
+                    <div class="col-md-4"><label for="precio" class="form-label">Precio unitario ($)</label><input
+                            id="precio" class="form-control" type="number" min="0.01" step="any" placeholder="Ej. 2.50"
+                            required></div>
+                    <div class="col-md-3"><label for="cantidad" class="form-label">Cantidad</label><input id="cantidad"
+                            class="form-control" type="number" min="1" step="1" placeholder="Ej. 3" required></div>
+                </div><button type="submit" class="btn btn-cafe mt-4">＋ Agregar pedido</button>
+            </form>
+            <div id="mensaje" class="mt-3" role="status" aria-live="polite"></div>
+        </section>
+        <section class="content-card" aria-labelledby="tituloPedidos">
+            <div class="section-heading">
+                <div class="section-icon">▤</div>
+                <div>
+                    <h2 id="tituloPedidos">Pedidos registrados</h2>
+                    <div class="section-sub">Consultá y filtrá los productos agregados</div>
+                </div>
+            </div>
+            <div class="filter-area">
+                <div class="row g-3 align-items-end">
+                    <div class="col-lg-4"><label for="precioMaximo" class="form-label">Filtrar por precio máximo
+                            ($)</label><input id="precioMaximo" class="form-control" type="number" min="0" step="any"
+                            placeholder="Ej. 3.00"></div>
+                    <div class="col-lg-8">
+                        <div class="d-flex gap-2 flex-wrap filter-buttons"><button id="btnFiltrar" type="button"
+                                class="btn btn-cafe">Filtrar productos</button><button id="btnMostrarTodos"
+                                type="button" class="btn btn-soft">Mostrar todos</button><button id="btnLimpiar"
+                                type="button" class="btn btn-clear">Limpiar pedidos</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive table-wrap">
+                <table class="table table-striped table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Precio unitario</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaPedidos"></tbody>
+                </table>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-label">Total de unidades</div>
+                    <div class="stat-value" id="totalUnidades">0</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-label">Monto total de pedidos</div>
+                    <div class="stat-value" id="montoTotal">$0.00</div>
+                </div>
+            </div>
+            <p class="small-note mb-0">Los totales incluyen todos los pedidos registrados, aunque la tabla esté
+                filtrada.</p>
+        </section>
+    </main>
+</body>
+
+</html>
