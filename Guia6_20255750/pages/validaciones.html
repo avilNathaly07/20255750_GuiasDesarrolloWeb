@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/stylesFunciones.css" rel="stylesheet" />
+    <link rel="icon" href="../img/js.png" sizes="32x32" type="image/png" />
+    <title>Validación con expresiones regulares</title>
+</head>
+
+<body>
+    <header>
+        <div class="px-3 py-2 text-bg-dark fixed-top">
+            <div class="container">
+                <a href="../indexFunciones.html" class="d-flex align-items-center text-white text-decoration-none">
+                    <img src="../img/js.png" alt="" width="32" height="32" class="me-2" />
+                    <span class="fs-5">Ficha de estudiante — expresiones regulares</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-12 shadow-lg p-3 mt-5 bg-body rounded">
+                <h3>Ficha de estudiante</h3>
+                <form id="idFormEstudiante" novalidate>
+                    <div class="row g-3">
+                        <div class="col-md-4"><label class="form-label" for="carnet">Carnet</label>
+                            <input id="carnet" class="form-control" placeholder="AB001">
+                            <div class="invalid-feedback">Dos letras y tres números. Ej: AB001</div></div>
+                        <div class="col-md-8"><label class="form-label" for="nombre">Nombre completo</label>
+                            <input id="nombre" class="form-control" placeholder="María José López">
+                            <div class="invalid-feedback">Solo letras y espacios (sin números ni símbolos).</div></div>
+                        <div class="col-md-4"><label class="form-label" for="dui">DUI</label>
+                            <input id="dui" class="form-control" placeholder="01234567-8">
+                            <div class="invalid-feedback">Formato ########-#</div></div>
+                        <div class="col-md-4"><label class="form-label" for="nit">NIT</label>
+                            <input id="nit" class="form-control" placeholder="0614-123456-123-4">
+                            <div class="invalid-feedback">Formato ####-######-###-#</div></div>
+                        <div class="col-md-4"><label class="form-label" for="fecha">Fecha de nacimiento</label>
+                            <input id="fecha" class="form-control" placeholder="dd/mm/aaaa">
+                            <div class="invalid-feedback">Formato día/mes/año válido. Ej: 25/12/2001</div></div>
+                        <div class="col-md-8"><label class="form-label" for="correo">Correo electrónico</label>
+                            <input id="correo" class="form-control" placeholder="usuario@dominio.com">
+                            <div class="invalid-feedback">Correo no válido.</div></div>
+                        <div class="col-md-4"><label class="form-label" for="edad">Edad</label>
+                            <input id="edad" class="form-control" placeholder="20">
+                            <div class="invalid-feedback">Solo números (0-120).</div></div>
+                    </div>
+                    <button type="submit" class="btn btn-success mt-3"><i class="bi bi-check-circle"></i> Validar</button>
+                    <div id="resultado" class="mt-3"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/validaciones.js" defer></script>
+</body>
+
+</html>
