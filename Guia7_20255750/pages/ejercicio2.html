@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <title>Ejercicio 2 - Spotify API</title>
+</head>
+<body class="bg-light">
+
+    <!-- Barra de navegación estilo guía -->
+    <header class="p-3 text-bg-dark mb-4">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <a href="../index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <span class="fs-4 fw-bold text-success">🎵 Spotify Explorer</span>
+                </a>
+                <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="../index.html" class="nav-link px-2 text-white">Inicio</a></li>
+                    <li><a href="ejemplo1.html" class="nav-link px-2 text-white">Ejemplo 1</a></li>
+                    <li><a href="ejemplo2.html" class="nav-link px-2 text-white">Ejemplo 2</a></li>
+                    <li><a href="ejemplo3.html" class="nav-link px-2 text-white">Ejemplo 3</a></li>
+                    <li><a href="ejemplo4.html" class="nav-link px-2 text-white">Ejemplo 4</a></li>
+                    <li><a href="ejercicio2.html" class="nav-link px-2 text-warning fw-bold">Ejercicio 2</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mb-5">
+        <!-- Encabezado y buscador -->
+        <div class="row align-items-center mb-4">
+            <div class="col-md-6">
+                <h2 class="fw-bold mb-1">Explorar Álbumes</h2>
+                <p class="text-muted mb-0">Haz clic en cualquier álbum para ver su ficha técnica sin recargar.</p>
+            </div>
+            <div class="col-md-6 mt-3 mt-md-0">
+                <form id="formBusqueda" class="input-group shadow-sm">
+                    <input type="text" id="inputBusqueda" class="form-control" 
+                           value="The Strokes" placeholder="Buscar artista o álbum (ej. Deftones, Enjambre)..." required>
+                    <button class="btn btn-success fw-semibold" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Contenedor de mensajes (Carga / Errores) -->
+        <div id="estadoMensaje" class="text-center my-3"></div>
+
+        <!-- Contenido principal en dos columnas -->
+        <div class="row g-4">
+            <!-- Columna izquierda: Listado de álbumes (Endpoint 1) -->
+            <div class="col-lg-7">
+                <div id="contenedorAlbumes" class="row g-3">
+                    <!-- Las tarjetas se crearán dinámicamente desde ejercicio2.js -->
+                </div>
+            </div>
+
+            <!-- Columna derecha: Detalle del álbum seleccionado (Endpoint 2) -->
+            <div class="col-lg-5">
+                <div class="sticky-top" style="top: 20px;">
+                    <div id="contenedorDetalle" class="card shadow-sm border-0 p-4">
+                        <div class="text-center text-muted py-5">
+                            <h5 class="fw-semibold">Ningún álbum seleccionado</h5>
+                            <p class="small mb-0">Selecciona una tarjeta de la izquierda para consultar su disquera, fecha de lanzamiento, canciones y discografía.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/ejercicio2.js"></script>
+</body>
+</html>
